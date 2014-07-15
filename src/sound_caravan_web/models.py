@@ -22,10 +22,6 @@ class AboutUs(models.Model):
         blank=False, null=False,
         verbose_name=_(u'Description')
     )
-    image = models.ForeignKey('Image',
-        blank=False, null=False,
-        verbose_name=_(u'Image')
-    )
 
     class Meta:
         verbose_name = _(u'About us')
@@ -81,6 +77,10 @@ class Event(models.Model):
     price = models.CharField(
         max_length=50, blank=False, null=False,
         verbose_name=_(u'Price')
+    )
+    image = models.ForeignKey('Image',
+        blank=False, null=False,
+        verbose_name=_(u'Image')
     )
 
     class Meta:
