@@ -131,9 +131,13 @@ class Contact(models.Model):
 
 
 class Image(models.Model):
+    title = models.CharField(
+        max_length=50, blank=False, null=False,
+        verbose_name=_(u'Title')
+    )
     image = models.ImageField(
         null=False, blank=False,
-        default=None, upload_to=None
+        default=None, upload_to='images'
     )
 
     class Meta:
@@ -141,10 +145,17 @@ class Image(models.Model):
         verbose_name_plural = _(u'Images')
 
     def __unicode__(self):
-        return _(u'image {}').format(self.image)
+        return u'{}'.format(self.title)
+
+    def __str__(self):
+        return u'{}'.format(self.title)
 
 
 class Video(models.Model):
+    title = models.CharField(
+        max_length=50, blank=False, null=False,
+        verbose_name=_(u'Title')
+    )
     video_script = models.TextField(
         blank=False, null=False,
         verbose_name=_(u'Video Script')
@@ -153,3 +164,9 @@ class Video(models.Model):
     class Meta:
         verbose_name = _(u'Video')
         verbose_name_plural = _(u'Videos')
+
+    def __unicode__(self):
+        return u'{}'.format(self.title)
+
+    def __str__(self):
+        return u'{}'.format(self.title)
