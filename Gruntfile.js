@@ -7,11 +7,11 @@ module.exports = function(grunt) {
         /* Watch task : SASS  */
         sass: {
             dist: {
-                options: { 
+                options: {
                     style: 'expanded'
                 },
-                files: { 
-                    'css/style.css': 'sass/style.scss',
+                files: {
+                    'src/sound_caravan_web/static/css/style.css': 'sass/style.scss',
                 }
             }
         },
