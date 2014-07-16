@@ -762,6 +762,16 @@ p {
   min-height: 330px;
 }
 
+.about-us {
+  margin-top: 30px;
+}
+.about-us img {
+  width: 22%;
+}
+.about-us .about-us-text {
+  width: 70%;
+}
+
 .patrocina {
   background-color: white;
   padding: 8px;
@@ -852,6 +862,13 @@ video#bgvideo {
 
   .premios .premios-list .col-1of3 {
     min-height: 100% !important;
+  }
+
+  .about-us img {
+    width: 100%;
+  }
+  .about-us .about-us-text {
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {

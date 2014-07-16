@@ -229,6 +229,16 @@ p {
     }
 }
 
+.about-us {
+    margin-top: 30px;
+    img {
+        width: 22%;
+    }
+    .about-us-text {
+        width: 70%;
+    }
+}
+
 .patrocina {
     background-color: white;
     padding: 8px;
@@ -331,6 +341,14 @@ video#bgvideo {
     .premios {
         .premios-list {
             .col-1of3 { min-height: 100% !important; }
+        }
+    }
+    .about-us {
+        img {
+            width: 100%;
+        }
+        .about-us-text {
+            width: 100%;
         }
     }
 }
