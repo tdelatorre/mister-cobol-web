@@ -39,6 +39,10 @@ class Member(models.Model):
         max_length=100, blank=False, null=False,
         verbose_name=_(u'Name')
     )
+    role = models.CharField(
+        max_length=100, blank=False, null=False,
+        verbose_name=_(u'Role')
+    )
     description = models.TextField(
         blank=False, null=False,
         verbose_name=_(u'Description')
@@ -108,10 +112,6 @@ class Event(models.Model):
     price = models.CharField(
         max_length=50, blank=False, null=False,
         verbose_name=_(u'Price')
-    )
-    image = models.ForeignKey('Image',
-        blank=False, null=False,
-        verbose_name=_(u'Image')
     )
 
     class Meta:
