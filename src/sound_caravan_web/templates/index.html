@@ -73,21 +73,21 @@
                 <a href="http://soundcaravan.com"><img src="/static/images/main-logo.png" alt="Sound Caravan" title="Sound Caravan" border="0"></a>
             </div>
             <ul class="nav">
-                <li><a class="smooth" href="#sobre-nosotros">SOBRE NOSOTROS</a></li>
-                <li><a class="smooth" href="#tour">TOUR</a></li>
-                <li><a class="smooth" href="#fotos">FOTOS</a></li>
-                <li><a class="smooth" href="#videos">VIDEOS</a></li>
-                <li><a class="smooth" href="#contacto">CONTACTO</a></li>
+                <li><a class="smooth" href="#sobre-nosotros">{% trans 'SOBRE NOSOTROS' %}</a></li>
+                <li><a class="smooth" href="#tour">{% trans 'TOUR' %}</a></li>
+                <li><a class="smooth" href="#fotos">{% trans 'FOTOS' %}</a></li>
+                <li><a class="smooth" href="#videos">{% trans 'VIDEOS' %}</a></li>
+                <li><a class="smooth" href="#contacto">{% trans 'CONTACTO' %}</a></li>
             </ul>
 
             <div class="nav-res-btn">MENU</div>
 
             <ul class="nav-res">
-                <li><a class="smooth" href="#sobre-nosotros">SOBRE NOSOTROS</a></li>
-                <li><a class="smooth" href="#tour">TOUR</a></li>
-                <li><a class="smooth" href="#fotos">FOTOS</a></li>
-                <li><a class="smooth" href="#videos">VIDEOS</a></li>
-                <li><a class="smooth" href="#contacto">CONTACTO</a></li>
+                <li><a class="smooth" href="#sobre-nosotros">{% trans 'SOBRE NOSOTROS' %}</a></li>
+                <li><a class="smooth" href="#tour">{% trans 'TOUR' %}</a></li>
+                <li><a class="smooth" href="#fotos">{% trans 'FOTOS' %}</a></li>
+                <li><a class="smooth" href="#videos">{% trans 'VIDEOS' %}</a></li>
+                <li><a class="smooth" href="#contacto">{% trans 'CONTACTO' %}</a></li>
             </ul>
 
         </div>
@@ -104,7 +104,7 @@
 
     <div class="row bg-lightgray" id="sobre-nosotros">
         <div class="row-inside content">
-            <h2 class="row-title">SOBRE NOSOTROS</h2>
+            <h2 class="row-title">{% trans 'SOBRE NOSOTROS' %}</h2>
 
             <div class="row-center" style="margin: 0px 0;">
                 <p>{{ about_us.0.description }}</p>
@@ -125,7 +125,7 @@
 
     <div class="row bg-white" id="tour">
         <div class="row-inside content">
-            <h2 class="row-title">TOUR</h2>
+            <h2 class="row-title">{% trans 'TOUR' %}</h2>
             <img class="img-hide left" src="{{ tour.0.image.image.url }}" alt="Tour">
             <div class="row-center" style="margin: 40px 0;">
                 <p>{{ tour.0.description }}</p>
@@ -140,7 +140,7 @@
 
     <div class="row bg-lightgray" id="fotos">
         <div class="row-inside content">
-            <h2 class="row-title">GALERÍA DE FOTOS</h2>
+            <h2 class="row-title">{% trans 'GALERÍA DE FOTOS' %}</h2>
 
             <!-- Flexslider photo gallery -->
             <div id="slider" class="flexslider">
@@ -166,14 +166,14 @@
 
     <div class="row bg-white premios" id="videos">
         <div class="row-inside content">
-            <h2 class="row-title">VIDEOS</h2>
+            <h2 class="row-title">{% trans 'VIDEOS' %}</h2>
             {{ video_list.0.video_script|safe }}
         </div>
     </div>
 
     <div class="row bg-lightgray" id="contacto">
         <div class="row-inside content">
-            <h2 class="row-title">CONTACTA CON NOSOTROS</h2>
+            <h2 class="row-title">{% trans 'CONTACTA CON NOSOTROS' %}</h2>
             <div class="col-1of2">
                 <p>{{ contact.0.address }}</p>
                 <p>{{ contact.0.email1 }}</p>
@@ -186,17 +186,17 @@
             </div>
             <div class="col-1of2 last">
                 <form id="contact-form">
-                    <div class="success">{% trans "Gracias! hemos recibido tu mensage." %}</div>
+                    <div class="success">{% trans 'Gracias! hemos recibido tu mensage.' %}</div>
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <input type="submit" value="{% trans "send" %}" />
+                    <input type="submit" value="{% trans 'send' %}" />
                 </form>
             </div>
         </div>
     </div>
 
     <div class="row bg-mediumgray">
-        <div class="row-inside footer">Sound Caravan ©2014 | Todos los derechos reservados</div>
+        <div class="row-inside footer">{% trans 'Sound Caravan ©2014 | Todos los derechos reservados' %}</div>
     </div>
 
     <div class="overlay"></div>
