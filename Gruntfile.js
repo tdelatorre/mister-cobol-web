@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                'js/features.min.js': ['js/features.js']
+                'src/sound_caravan_web/static/js/features.min.js': ['src/sound_caravan_web/static/js/features.js']
                 }
             }
         }
