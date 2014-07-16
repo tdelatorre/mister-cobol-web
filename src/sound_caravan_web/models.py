@@ -30,6 +30,9 @@ class AboutUs(models.Model):
     def __unicode__(self):
         return u'{}'.format(self.title)
 
+    def __str__(self):
+        return u'{}'.format(self.title)
+
 
 class Member(models.Model):
     name = models.CharField(
@@ -51,6 +54,34 @@ class Member(models.Model):
 
     def __unicode__(self):
         return u'{}'.format(self.name)
+
+    def __str__(self):
+        return u'{}'.format(self.name)
+
+
+class Tour(models.Model):
+    title = models.CharField(
+        max_length=50, blank=False, null=False,
+        verbose_name=_(u'Title')
+    )
+    description = models.TextField(
+        blank=False, null=False,
+        verbose_name=_(u'Description')
+    )
+    image = models.ForeignKey('Image',
+        blank=False, null=False,
+        verbose_name=_(u'Image')
+    )
+
+    class Meta:
+        verbose_name = _(u'Tour')
+        verbose_name_plural = _(u'Tours')
+
+    def __unicode__(self):
+        return u'{}'.format(self.title)
+
+    def __str__(self):
+        return u'{}'.format(self.title)
 
 
 class Event(models.Model):
@@ -88,6 +119,9 @@ class Event(models.Model):
         verbose_name_plural = _(u'Events')
 
     def __unicode__(self):
+        return u'{}'.format(self.title)
+
+    def __str__(self):
         return u'{}'.format(self.title)
 
 
@@ -164,6 +198,11 @@ class Video(models.Model):
     video_script = models.TextField(
         blank=False, null=False,
         verbose_name=_(u'Video Script')
+    )
+    for_home = models.BooleanField(
+        blank=False, null=False,
+        default=False,
+        verbose_name=_(u'For home')
     )
 
     class Meta:
