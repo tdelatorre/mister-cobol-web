@@ -33,6 +33,10 @@
     <script src="/static/js/jquery.js"></script>
     <script src="/static/js/features.min.js" type="text/javascript"></script>
     <script src="/static/js/waypoints.min.js" type="text/javascript"></script>
+    
+    <!-- Flexslider photo gallery -->
+    <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css">
+    <script src="/static/js/jquery.flexslider.js"></script>
 
     <!-- remove livereload -->
     <script src="http://localhost:35729/livereload.js"></script>
@@ -132,9 +136,35 @@
     <div class="row bg-lightgray" id="fotos">
         <div class="row-inside content">
             <h2 class="row-title">GALERÍA DE FOTOS</h2>
-            <!-- //TODO: Falta la galería de imágenes -->
-            <img class="img-hide left" src="" alt="">
-        </div>
+               
+            <!-- Flexslider photo gallery -->
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="static/images/1.jpg" />
+                    </li>
+                    <li>
+                        <img src="static/images/2.jpg" />
+                    </li>
+                    <li>
+                        <img src="static/images/3.jpg" />
+                    </li>
+                </ul>
+            </div>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="static/images/1.jpg" />
+                    </li>
+                    <li>
+                        <img src="static/images/2.jpg" />
+                    </li>
+                    <li>
+                        <img src="static/images/3.jpg" />
+                    </li>
+                </ul>
+            </div>
+        </div>           
     </div>
 
     <div class="row bg-white premios" id="videos">
@@ -176,4 +206,27 @@
     </video>
 
 </body>
+
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            // The slider being synced must be initialized first
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 210,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+           
+            $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel"
+            });
+        });
+    </script>
 </html>
