@@ -139,6 +139,11 @@ class Image(models.Model):
         null=False, blank=False,
         default=None, upload_to='images'
     )
+    for_gallery = models.BooleanField(
+        blank=False, null=False,
+        default=False,
+        verbose_name=_(u'For gallery')
+    )
 
     class Meta:
         verbose_name = _(u'Image')
