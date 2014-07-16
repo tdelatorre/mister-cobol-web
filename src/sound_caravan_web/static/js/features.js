@@ -128,3 +128,62 @@ jQuery(document).ready(function() {
         update();
     };
 })(jQuery);
+
+// CONTACT FORM
+jQuery(document).ready(function() {
+    $('#contact-form .success').hide();
+
+    $('#contact-form').on('submit', function(e) {
+        function success_submit () {
+            $('#contact-form .success').show();
+            $('.name_error').remove()
+            $('.subject_error').remove()
+            $('.email_error').remove()
+            $('.message_error').remove()
+        }
+
+        function error_submit (error) {
+            var data = error.responseJSON;
+            $('#contact-form .success').hide();
+            $('.name_error').remove()
+            $('.subject_error').remove()
+            $('.email_error').remove()
+            $('.message_error').remove()
+
+            if('name' in data) {
+                data['name'].forEach(function (entry) {
+                    $('#id_name').after('<div class="name_error error">' + entry + '</div>');
+                });
+            }
+
+            if('subject' in data) {
+                data['subject'].forEach(function (entry) {
+                    $('#id_subject').after('<div class="subject_error error">' + entry + '</div>');
+                });
+            }
+
+            if('email' in data) {
+                data['email'].forEach(function (entry) {
+                    $('#id_email').after('<div class="email_error error">' + entry + '</div>');
+                });
+            }
+
+            if('message' in data) {
+                data['message'].forEach(function (entry) {
+                    $('#id_message').after('<div class="message_error error">' + entry + '</div>');
+                });
+            }
+        }
+
+        e.preventDefault()
+        var datastring = $("#contact-form").serialize();
+        $.ajax({
+            type: "POST",
+            url: "/contact/",
+            data: datastring,
+            dataType: "json",
+            success: success_submit,
+            error: error_submit
+        });
+    });
+});

@@ -112,3 +112,6 @@ MEDIA_URL = '/media/'
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
+
+CONTACT_EMAILS_DESTIONATION = "modify-it@modify-it.com"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -1,6 +1,15 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from .models import *
+from django.views.generic import View
+from django.http import HttpResponse, HttpResponseBadRequest
+from django.core.mail import send_mail
+from django.conf import settings
+
+
+import json
+
+from .forms import ContactForm
 
 
 class LandingView(TemplateView):
@@ -16,7 +25,8 @@ class LandingView(TemplateView):
         video_list = Video.objects.filter(for_home=False)
         contact = Contact.objects.all()
 
-        context = {
+        context = super().get_context_data(**kwargs)
+        context.update({
             'home': home,
             'about_us': about_us,
             'members': members,
@@ -25,11 +35,21 @@ class LandingView(TemplateView):
             'images': images,
             'video_list': video_list,
             'contact': contact,
-        }
-
+            'form': ContactForm(),
+        })
         return context
 
 
+class ContactView(View):
+    def post(self, request):
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            message = "Contact from: {}\n\n".format(form.cleaned_data['name'])
+            message += "With email: {}\n\n".format(form.cleaned_data['email'])
+            message += "Subject: {}\n\n".format(form.cleaned_data['subject'])
+            message += "Message:\n{}\n".format(form.cleaned_data['message'])
 
+            send_mail("Contact from the web", message, "web@sound-caravan-web", [settings.CONTACT_EMAILS_DESTIONATION], fail_silently=True)
+            return HttpResponse(json.dumps({"success": True}), content_type='application/json')
 
-
+        return HttpResponseBadRequest(json.dumps(form.errors), content_type='application/json')

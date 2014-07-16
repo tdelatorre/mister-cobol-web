@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <!doctype html>
 <html lang="es-ES">
 <head>
@@ -206,8 +208,12 @@
                 <a class="" style="display: table; margin: 6px auto;" href="" target="_blank">MySpace</a>
             </div>
             <div class="col-1of2 last">
-                <!-- //TODO: Formulario de contacto -->
-                <p>Formulario de contacto.</p>
+                <form id="contact-form">
+                    <div class="success">{% trans "Gracias! hemos recibido tu mensage." %}</div>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="{% trans "send" %}" />
+                </form>
             </div>
         </div>
     </div>

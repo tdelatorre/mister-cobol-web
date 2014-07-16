@@ -296,6 +296,15 @@ video#bgvideo {
     z-index: -1;
 }
 
+#contact-form {
+    .error {
+        color: $error;
+    }
+    .success {
+        color: $success;
+    }
+}
+
 // RESPONSIVE
 @media screen and (max-width: 1480px) {
     .header {

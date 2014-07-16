@@ -827,6 +827,13 @@ video#bgvideo {
   z-index: -1;
 }
 
+#contact-form .error {
+  color: #d05866;
+}
+#contact-form .success {
+  color: #b0d058;
+}
+
 @media screen and (max-width: 1480px) {
   .header .main-logo {
     margin-left: -750px;

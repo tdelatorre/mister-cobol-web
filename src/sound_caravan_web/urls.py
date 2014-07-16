@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
-from .views import LandingView
+from .views import LandingView, ContactView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', LandingView.as_view(), name='landing'),
+    url(r'^contact/$', ContactView.as_view(), name='contact'),
 )
 
 
