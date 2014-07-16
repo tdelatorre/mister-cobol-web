@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 /src/media
+node_modules/
+.sass-cache
 
 # C extensions
 *.so
