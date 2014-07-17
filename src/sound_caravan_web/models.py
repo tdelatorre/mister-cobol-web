@@ -53,10 +53,15 @@ class Member(models.Model):
         blank=False, null=False,
         verbose_name=_(u'Image')
     )
+    order = models.SmallIntegerField(
+        blank=False, null=False,
+        verbose_name=_(u'order')
+    )
 
     class Meta:
         verbose_name = _(u'Member')
         verbose_name_plural = _(u'Members')
+        ordering = ['order']
 
     def __unicode__(self):
         return u'{}'.format(self.name)
@@ -109,6 +114,7 @@ class Event(models.Model):
     class Meta:
         verbose_name = _(u'Event')
         verbose_name_plural = _(u'Events')
+        ordering = ['-event_date']
 
     def __unicode__(self):
         return u'{}'.format(self.title)
@@ -170,10 +176,15 @@ class Image(models.Model):
         default=False,
         verbose_name=_(u'For gallery')
     )
+    order = models.SmallIntegerField(
+        blank=False, null=False,
+        verbose_name=_(u'order')
+    )
 
     class Meta:
         verbose_name = _(u'Image')
         verbose_name_plural = _(u'Images')
+        ordering = ['order']
 
     def __unicode__(self):
         return u'{}'.format(self.title)
