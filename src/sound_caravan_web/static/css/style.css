@@ -809,6 +809,14 @@ p {
   color: white;
 }
 
+.footer-links {
+  font-size: 0.7em;
+  padding: 0%;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
 video#bgvideo {
   top: 0;
   left: 0;
