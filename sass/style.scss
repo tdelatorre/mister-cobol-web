@@ -239,6 +239,30 @@ p {
     }
 }
 
+//QUOTE FLEXSLIDER
+    .flexslider {
+        margin: 5px 0 0 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #carousel.flexslider {
+        overflow: hidden;
+        height: 150px;
+    }
+    
+    .flex-viewport {
+        height: 600px;
+        .slides {
+            img {
+                height: 600px;
+                width: auto !important;
+                margin: 0 auto;
+            }
+        }
+    }
+
 .patrocina {
     background-color: white;
     padding: 8px;
