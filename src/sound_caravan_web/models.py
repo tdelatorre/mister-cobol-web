@@ -3,9 +3,20 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Home(models.Model):
-    main_video = models.ForeignKey('Video',
-        blank=False, null=False,
-        verbose_name=_(u'Main video')
+    video_mp4 = models.FileField(
+        null=False, blank=False,
+        default=None, upload_to='files',    
+        verbose_name=_(u'Video mp4')
+    )
+    video_ogv = models.FileField(
+        null=False, blank=False,
+        default=None, upload_to='files',    
+        verbose_name=_(u'Video ogv')
+    )
+    video_webm = models.FileField(
+        null=False, blank=False,
+        default=None, upload_to='files',
+        verbose_name=_(u'Video webm')
     )
 
     class Meta:

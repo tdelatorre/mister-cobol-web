@@ -16,7 +16,7 @@ class LandingView(TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
-        home = Home.objects.filter(main_video__for_home=True)
+        home = Home.objects.all()
         about_us = AboutUs.objects.all()
         members = Member.objects.all()
         tour = Tour.objects.all()
