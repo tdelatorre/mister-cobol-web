@@ -1,16 +1,17 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from solo.models import SingletonModel
 
 
-class Home(models.Model):
+class Home(SingletonModel):
     video_mp4 = models.FileField(
         null=False, blank=False,
-        default=None, upload_to='files',    
+        default=None, upload_to='files',
         verbose_name=_(u'Video mp4')
     )
     video_ogv = models.FileField(
         null=False, blank=False,
-        default=None, upload_to='files',    
+        default=None, upload_to='files',
         verbose_name=_(u'Video ogv')
     )
     video_webm = models.FileField(
@@ -21,14 +22,10 @@ class Home(models.Model):
 
     class Meta:
         verbose_name = _(u'Home')
-        verbose_name_plural = _(u'Homes')
+        verbose_name_plural = _(u'Home')
 
 
-class AboutUs(models.Model):
-    title = models.CharField(
-        max_length=50, blank=False, null=False,
-        verbose_name=_(u'Title')
-    )
+class AboutUs(SingletonModel):
     description = models.TextField(
         blank=False, null=False,
         verbose_name=_(u'Description')
@@ -37,12 +34,6 @@ class AboutUs(models.Model):
     class Meta:
         verbose_name = _(u'About us')
         verbose_name_plural = _(u'About us')
-
-    def __unicode__(self):
-        return u'{}'.format(self.title)
-
-    def __str__(self):
-        return u'{}'.format(self.title)
 
 
 class Member(models.Model):
@@ -74,29 +65,19 @@ class Member(models.Model):
         return u'{}'.format(self.name)
 
 
-class Tour(models.Model):
-    title = models.CharField(
-        max_length=50, blank=False, null=False,
-        verbose_name=_(u'Title')
-    )
+class Tour(SingletonModel):
     description = models.TextField(
         blank=False, null=False,
         verbose_name=_(u'Description')
     )
     image = models.ForeignKey('Image',
-        blank=False, null=False,
+        blank=True, null=True,
         verbose_name=_(u'Image')
     )
 
     class Meta:
         verbose_name = _(u'Tour')
-        verbose_name_plural = _(u'Tours')
-
-    def __unicode__(self):
-        return u'{}'.format(self.title)
-
-    def __str__(self):
-        return u'{}'.format(self.title)
+        verbose_name_plural = _(u'Tour')
 
 
 class Event(models.Model):
@@ -136,7 +117,7 @@ class Event(models.Model):
         return u'{}'.format(self.title)
 
 
-class Contact(models.Model):
+class Contact(SingletonModel):
     address = models.TextField(
         blank=True, null=False,
         verbose_name=_(u'Address')
@@ -172,7 +153,7 @@ class Contact(models.Model):
 
     class Meta:
         verbose_name = _(u'Contact')
-        verbose_name_plural = _(u'Contacts')
+        verbose_name_plural = _(u'Contact')
 
 
 class Image(models.Model):
@@ -201,24 +182,19 @@ class Image(models.Model):
         return u'{}'.format(self.title)
 
 
-class Video(models.Model):
+class Video(SingletonModel):
     title = models.CharField(
         max_length=50, blank=False, null=False,
         verbose_name=_(u'Title')
     )
     video_script = models.TextField(
         blank=False, null=False,
-        verbose_name=_(u'Video Script')
-    )
-    for_home = models.BooleanField(
-        blank=False, null=False,
-        default=False,
-        verbose_name=_(u'For home')
+        verbose_name=_(u'Video List Script')
     )
 
     class Meta:
         verbose_name = _(u'Video')
-        verbose_name_plural = _(u'Videos')
+        verbose_name_plural = _(u'Video')
 
     def __unicode__(self):
         return u'{}'.format(self.title)
