@@ -40,6 +40,7 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'solo',
 )
 
 LOCAL_APPS = (

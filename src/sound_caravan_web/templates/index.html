@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n solo_tags %}
 
 <!doctype html>
 <html lang="es-ES">
@@ -106,8 +106,9 @@
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'SOBRE NOSOTROS' %}</h2>
 
+            {% get_solo 'sound_caravan_web.AboutUs' as about_us %}
             <div class="row-center" style="margin: 0px 0;">
-                <p>{{ about_us.0.description }}</p>
+                <p>{{ about_us.description }}</p>
             </div>
 
             {% for member in members %}
@@ -126,9 +127,11 @@
     <div class="row bg-white" id="tour">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'TOUR' %}</h2>
-            <img class="img-hide left" src="{{ tour.0.image.image.url }}" alt="Tour">
+            {% get_solo 'sound_caravan_web.Tour' as tour %}
+            <img class="img-hide left" src="{{ tour.image.image.url }}" alt="Tour">
+
             <div class="row-center" style="margin: 40px 0;">
-                <p>{{ tour.0.description }}</p>
+                <p>{{ tour.description }}</p>
             </div>
 
             {% for event in events %}
@@ -167,22 +170,24 @@
     <div class="row bg-white premios" id="videos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'VIDEOS' %}</h2>
-            {{ video_list.0.video_script|safe }}
+            {% get_solo 'sound_caravan_web.Video' as video %}
+            {{ video.video_script|safe }}
         </div>
     </div>
 
     <div class="row bg-lightgray" id="contacto">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'CONTACTA CON NOSOTROS' %}</h2>
+            {% get_solo 'sound_caravan_web.Contact' as contact %}
             <div class="col-1of2">
-                <p>{{ contact.0.address }}</p>
-                <p>{{ contact.0.email1 }}</p>
-                <p>{{ contact.0.email2 }}</p>
-                <p>{{ contact.0.phone1 }}</p>
-                <p>{{ contact.0.phone2 }}</p>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.0.facebook }}" target="_blank">Facebook</a>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.0.twitter }}" target="_blank">Twitter</a>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.0.myspace }}" target="_blank">MySpace</a>
+                <p>{{ contact.address }}</p>
+                <p>{{ contact.email1 }}</p>
+                <p>{{ contact.email2 }}</p>
+                <p>{{ contact.phone1 }}</p>
+                <p>{{ contact.phone2 }}</p>
+                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.facebook }}" target="_blank">Facebook</a>
+                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.twitter }}" target="_blank">Twitter</a>
+                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.myspace }}" target="_blank">MySpace</a>
             </div>
             <div class="col-1of2 last">
                 <form id="contact-form">
@@ -205,10 +210,17 @@
     </div>
 
     <div class="overlay"></div>
+    {% get_solo 'sound_caravan_web.Home' as home %}
     <video id="bgvideo" muted autoplay loop>
-        <source src="{{ home.0.video_mp4.url }}" type="video/mp4"></source>
-        <source src="{{ home.0.video_webm.url }}" type="video/webm"></source>
-        <source src="{{ home.0.video_ogv.url }}" type="video/ogg"></source>
+        {% if home.video_mp4 %}
+            <source src="{{ home.video_mp4.url }}" type="video/mp4"></source>
+        {% endif %}
+        {% if home.video_webm %}
+            <source src="{{ home.video_webm.url }}" type="video/webm"></source>
+        {% endif %}
+        {% if home.video_ogv %}
+            <source src="{{ home.video_ogv.url }}" type="video/ogg"></source>
+        {% endif %}
     </video>
 
 </body>
