@@ -171,6 +171,10 @@ class Image(models.Model):
         null=False, blank=False,
         default=None, upload_to='images'
     )
+    image_th = models.ImageField(
+        null=True, blank=True,
+        default=None, upload_to='images'
+    )
     for_gallery = models.BooleanField(
         blank=False, null=False,
         default=False,

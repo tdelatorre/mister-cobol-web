@@ -158,9 +158,11 @@
             <div id="carousel" class="flexslider">
                 <ul class="slides">
                     {% for image in images %}
-                        <li>
-                            <img src="{{ image.image.url }}" alt="{{ image.title }}" />
-                        </li>
+                        {% if image.image_th %}
+                            <li>
+                                <img src="{{ image.image_th.url }}" alt="{{ image.title }}" />
+                            </li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>

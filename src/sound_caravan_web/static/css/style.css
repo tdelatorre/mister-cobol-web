@@ -779,14 +779,11 @@ p {
   box-shadow: none !important;
 }
 
-#carousel.flexslider {
-  overflow: hidden;
-  height: 150px;
+#carousel.flexslider img {
+  height: auto;
+  width: 100% !important;
 }
 
-.flex-viewport {
-  height: 600px;
-}
 .flex-viewport .slides img {
   height: 600px;
   width: auto !important;

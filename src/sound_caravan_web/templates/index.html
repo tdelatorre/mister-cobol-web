@@ -158,9 +158,11 @@
             <div id="carousel" class="flexslider">
                 <ul class="slides">
                     {% for image in images %}
-                        <li>
-                            <img src="{{ image.image.url }}" alt="{{ image.title }}" />
-                        </li>
+                        {% if image.image_th %}
+                            <li>
+                                <img src="{{ image.image_th.url }}" alt="{{ image.title }}" />
+                            </li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
@@ -205,7 +207,9 @@
             {% trans 'Sound Caravan ©2014 | Todos los derechos reservados' %}
         </div>
         <div class="footer-links">
-            {% blocktrans %}Creada en la <a href="http://piweek.com"><img style="width: auto" src="/static/images/logo-piweek17.png"/></a> de <a href="http://kaleidos.net"><img style="width: auto" src="/static/images/logo-kaleidos17.png"/></a>{% endblocktrans %}
+            {% blocktrans %}Creada en la <a href="http://piweek.com"  target="_blank"><img style="width: auto" src="/static/images/logo-piweek17.png"/></a>
+             de <a href="http://kaleidos.net"  target="_blank"><img style="width: auto" src="/static/images/logo-kaleidos17.png"/></a>
+            {% endblocktrans %}
         </div>
     </div>
 
