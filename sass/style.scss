@@ -15,7 +15,8 @@ body {
     font-family: 'Gotham', sans-serif;
     color: $light-gray;
     line-height: 1.5;
-    background: url('') 50% 0 repeat fixed;
+    background: url('../images/bg-res.jpg') 50% 0 repeat fixed;
+    background-position: center top;
 }
 
 p {
