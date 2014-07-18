@@ -114,5 +114,9 @@ MEDIA_URL = '/media/'
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-CONTACT_EMAILS_DESTIONATION = "modify-it@modify-it.com"
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+try:
+    from .settings_local import *
+except ImportError:
+    pass
