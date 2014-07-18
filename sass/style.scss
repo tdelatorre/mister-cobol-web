@@ -60,6 +60,9 @@ p {
                 vertical-align: middle;
                 width: 100%;
                 max-width: 300px;
+                img {
+                    display: none;
+                }
             }
             a {
                 vertical-align: middle;
@@ -366,10 +369,11 @@ p {
                 input.form-btn {
                     border: none;
                     color: white;
-                    width: 100%;
-                    font-size: 1.5em;
+                    width: 20%;
+                    font-size: 1.2em;
                     background-color: darken($primary-color, 15%);
                     text-align: center;
+                    cursor: pointer;
                     &:hover {
                         background-color: white;
                         color: $primary-color;

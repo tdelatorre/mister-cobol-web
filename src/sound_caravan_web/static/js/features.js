@@ -9,14 +9,16 @@ jQuery(document).ready(function() {
 
 // SCROLL MENU
 jQuery(document).ready(function() {
-    
+
     var nav = $('.nav');
-    
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 400) {
             nav.addClass("f-nav");
+            $('.main-logo img').show()
         } else {
             nav.removeClass("f-nav");
+            $('.main-logo img').hide()
         }
     });
 
@@ -24,18 +26,18 @@ jQuery(document).ready(function() {
 
 // SMOOTH SCROLL
 jQuery(document).ready(function() {
-    $('a.smooth').on('click', function(e) {  
-        var link = $(this);  
-        var anchor  = link.attr('href');  
-        $('html, body').stop().animate({  
-            scrollTop: $(anchor).offset().top  
-        }, 1000);  
+    $('a.smooth').on('click', function(e) {
+        var link = $(this);
+        var anchor  = link.attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top
+        }, 1000);
     });
 });
 
 // BG VIDEO
 jQuery(document).ready(function() {
-        
+
     $('video#bgvideo').on("loadedmetadata", scaleVideo);
     $(window).on("resize", scaleVideo);
 
@@ -85,8 +87,8 @@ jQuery(document).ready(function() {
         var getHeight;
         var firstTop;
         var paddingTop = 0;
-        
-        //get the starting position of each element to have parallax applied to it      
+
+        //get the starting position of each element to have parallax applied to it
         $this.each(function(){
             firstTop = $this.offset().top;
         });
@@ -100,15 +102,15 @@ jQuery(document).ready(function() {
                 return jqo.height();
             };
         }
-            
+
         // setup defaults if arguments aren't specified
         if (arguments.length < 1 || xpos === null) xpos = "50%";
         if (arguments.length < 2 || speedFactor === null) speedFactor = 0.1;
         if (arguments.length < 3 || outerHeight === null) outerHeight = true;
-        
+
         // function to be called whenever the window is scrolled or resized
         function update(){
-            var pos = $window.scrollTop();              
+            var pos = $window.scrollTop();
 
             $this.each(function(){
                 var $element = $(this);
@@ -122,7 +124,7 @@ jQuery(document).ready(function() {
 
                 $this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
             });
-        }       
+        }
 
         $window.bind('scroll', update).resize(update);
         update();
@@ -136,19 +138,23 @@ jQuery(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
         function success_submit () {
             $('#contact-form .success').show();
-            $('.name_error').remove()
-            $('.subject_error').remove()
-            $('.email_error').remove()
-            $('.message_error').remove()
+            $('.name_error').remove();
+            $('.subject_error').remove();
+            $('.email_error').remove();
+            $('.message_error').remove();
+            $('#id_name').val('');
+            $('#id_subject').val('');
+            $('#id_email').val('');
+            $('#id_message').val('');
         }
 
         function error_submit (error) {
             var data = error.responseJSON;
             $('#contact-form .success').hide();
-            $('.name_error').remove()
-            $('.subject_error').remove()
-            $('.email_error').remove()
-            $('.message_error').remove()
+            $('.name_error').remove();
+            $('.subject_error').remove();
+            $('.email_error').remove();
+            $('.message_error').remove();
 
             if('name' in data) {
                 data['name'].forEach(function (entry) {
@@ -175,7 +181,7 @@ jQuery(document).ready(function() {
             }
         }
 
-        e.preventDefault()
+        e.preventDefault();
         var datastring = $("#contact-form").serialize();
         $.ajax({
             type: "POST",
