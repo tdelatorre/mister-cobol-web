@@ -53,6 +53,7 @@ p {
         list-style: none;
         margin: 2.2em auto;
         z-index: 1;
+        text-align: center;
         li {
             display: inline-block;
             &.main-logo {
@@ -141,18 +142,14 @@ p {
 .home {
     text-align: center;
     max-height: 650px;
-    padding: 6% 0 6% 0;
+    padding: 10% 0;
     h1 {
-        text-indent: -1000em;
         max-width: 500px;
         width: 100%;
         height: 300px;
         margin: 0 auto;
         &:hover {
             @include scale-3d(1.1);
-        }
-        img {
-            display: none;
         }
     }
     h2 {
@@ -242,6 +239,11 @@ p {
     .about-us-text {
         width: 70%;
     }
+    .member-name {
+        color: $primary-color;
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 2em;
+    }
 }
 
 //QUOTE FLEXSLIDER
@@ -263,6 +265,13 @@ p {
                 height: 600px;
                 width: auto !important;
                 margin: 0 auto;
+            }
+        }
+    }
+    .flex-direction-nav {
+        li {
+            a {
+                color: white !important;
             }
         }
     }
@@ -291,6 +300,84 @@ p {
 
 .content {
     padding: 80px 0;
+    .event-row {
+        width: 75%;
+        margin: 0 auto 15px auto;
+        border-bottom: solid 5px $primary-color;
+        .event-date {
+            display: inline-block;
+            background-color: $primary-color;
+            color: white;
+            font-family: 'Cabin Sketch', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding: 1.6em 1.2em;
+            font-size: 1.2em;
+            max-width: 220px;
+            width: 100%;
+        }
+        .event-content {
+        display: inline-block;
+            .event-title {
+                display: inline-block;
+                font-family: 'Cabin Sketch', cursive;
+                font-size: 2em;
+            }
+            .event-description { color: $primary-color;}
+            .event-data {}
+        }
+    }
+    .share-btn {
+        display: inline-block !important;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        background-color: white;
+        border-radius: 50%;
+        line-height: 1.3em;
+        vertical-align: middle;
+    }
+    .contact-info {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .contact {
+        background-color: $primary-color;
+        padding: 20px;
+        #contact-form {
+            p {
+                label {
+                    width: 100%;
+                }
+                input {
+                    border: none;
+                    padding: 8px;
+                    width: 100%;
+                    outline: none;
+
+                    &:focus {
+                        border: 2px solid darken($primary-color, 15%);
+                    }
+                }
+                input#id_message {
+                    min-height: 200px;
+                }
+                input.form-btn {
+                    border: none;
+                    color: white;
+                    width: 100%;
+                    font-size: 1.5em;
+                    background-color: darken($primary-color, 15%);
+                    text-align: center;
+                    &:hover {
+                        background-color: white;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // USE WITH WAYPOINTS.JS
@@ -388,6 +475,15 @@ video#bgvideo {
         }
         .about-us-text {
             width: 100%;
+        }
+    }
+    .content {
+        .event-row {
+            text-align: center;
+            border: none;
+            .event-date {
+                max-width: 100%;
+            }
         }
     }
 }

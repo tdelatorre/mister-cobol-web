@@ -67,12 +67,10 @@
 
 <body>
 
-    <div class="row">
+    <div class="row" id="inicio">
         <div class="header">
-            <div class="main-logo">
-                <a href="http://soundcaravan.com"><img src="/static/images/main-logo.png" alt="Sound Caravan" title="Sound Caravan" border="0"></a>
-            </div>
             <ul class="nav">
+                <li class="main-logo"><a class="smooth" href="#inicio"><a href="http://soundcaravan.com"><img src="/static/images/main-logo.png" alt="Sound Caravan" title="Sound Caravan" border="0"></a></a></li>
                 <li><a class="smooth" href="#sobre-nosotros">{% trans 'SOBRE NOSOTROS' %}</a></li>
                 <li><a class="smooth" href="#tour">{% trans 'TOUR' %}</a></li>
                 <li><a class="smooth" href="#fotos">{% trans 'FOTOS' %}</a></li>
@@ -95,14 +93,13 @@
 
     <div class="row">
         <div class="row-inside home">
-            <h1>SOUND CARAVAN
-                <!-- TODO: Imagen de la Home-->
-                <img src="" alt="SOUND CARAVAN">
+            <h1>
+                <img src="/static/images/main-logo.png" alt="SOUND CARAVAN" border="0"/>
             </h1>
         </div>
     </div>
 
-    <div class="row bg-lightgray" id="sobre-nosotros">
+    <div class="row bg-darkgray dashed" id="sobre-nosotros">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'SOBRE NOSOTROS' %}</h2>
 
@@ -116,7 +113,7 @@
                     <img class="img-hide left" src="{{ member.image.image.url }}" alt="{{ member.name }}">
 
                     <div style="margin-top: 40px;" class="about-us-text right last">
-                        <p><strong>{{ member.name }}</strong> ({{ member.role }})</p>
+                        <p class="member-name"><strong>{{ member.name }}</strong> ({{ member.role }})</p>
                         <p>{{ member.description }}</p>
                     </div>
                 </div>
@@ -124,7 +121,7 @@
         </div>
     </div>
 
-    <div class="row bg-white" id="tour">
+    <div class="row bg-black dashed" id="tour">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'TOUR' %}</h2>
             {% get_solo 'sound_caravan_web.Tour' as tour %}
@@ -135,13 +132,19 @@
             </div>
 
             {% for event in events %}
-                <p><strong>{{ event.event_date }}</strong>: {{ event.title }}. {{ event.description }}</br>
-                {{ event.location }}, {{ event.event_hour }}, {{ event.price }}</p>
+                <div class="event-row">
+                    <div class="event-date">{{ event.event_date }}</div>
+                    <div class="event-content">
+                        <div class="event-title">{{ event.title }}</div>
+                        <div class="event-description">{{ event.description }}</div>
+                        <div class="event-data">{{ event.location }}, {{ event.event_hour }}, {{ event.price }}</div>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>
 
-    <div class="row bg-lightgray" id="fotos">
+    <div class="row bg-darkgray dashed" id="fotos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'GALERÍA DE FOTOS' %}</h2>
 
@@ -169,7 +172,7 @@
         </div>
     </div>
 
-    <div class="row bg-white premios" id="videos">
+    <div class="row bg-black premios dashed" id="videos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'VIDEOS' %}</h2>
             {% get_solo 'sound_caravan_web.Video' as video %}
@@ -177,21 +180,20 @@
         </div>
     </div>
 
-    <div class="row bg-lightgray" id="contacto">
+    <div class="row bg-darkgray dashed" id="contacto">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'CONTACTA CON NOSOTROS' %}</h2>
             {% get_solo 'sound_caravan_web.Contact' as contact %}
-            <div class="col-1of2">
+            <div class="col-1of2 contact-info">
                 <p>{{ contact.address }}</p>
                 <p>{{ contact.email1 }}</p>
                 <p>{{ contact.email2 }}</p>
-                <p>{{ contact.phone1 }}</p>
-                <p>{{ contact.phone2 }}</p>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.facebook }}" target="_blank">Facebook</a>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.twitter }}" target="_blank">Twitter</a>
-                <a class="" style="display: table; margin: 6px auto;" href="{{ contact.myspace }}" target="_blank">MySpace</a>
+                <p>{{ contact.phone1 }} / {{ contact.phone2 }}</p>
+                <a class="share-btn" style="display: table; margin: 6px auto;" href="{{ contact.facebook }}" target="_blank"><i class="icon-facebook"></i></i></a>
+                <a class="share-btn" style="display: table; margin: 6px auto;" href="{{ contact.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
+                <a class="share-btn" style="display: table; margin: 6px auto;" href="{{ contact.myspace }}" target="_blank"><i class="icon-youtube"></i></a>
             </div>
-            <div class="col-1of2 last">
+            <div class="col-1of2 last contact">
                 <form id="contact-form">
                     <div class="success">{% trans 'Gracias! hemos recibido tu mensage.' %}</div>
                     {% csrf_token %}
@@ -202,7 +204,7 @@
         </div>
     </div>
 
-    <div class="row bg-mediumgray">
+    <div class="row bg-primary-color">
         <div class="row-inside footer">
             {% blocktrans %}Sound Caravan ©2014 | Creada en la <a href="http://piweek.com" target="_blank">
                 <img style="width: auto" src="/static/images/logo-piweek17.png"/></a>
