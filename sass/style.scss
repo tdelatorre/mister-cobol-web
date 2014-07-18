@@ -145,7 +145,7 @@ p {
 .home {
     text-align: center;
     max-height: 650px;
-    padding: 10% 0;
+    padding: 10% 0 15% 0;
     h1 {
         max-width: 500px;
         width: 100%;
@@ -306,7 +306,7 @@ p {
     .event-row {
         width: 75%;
         margin: 0 auto 15px auto;
-        border-bottom: solid 5px $primary-color;
+        border-bottom: solid 3px $primary-color;
         .event-date {
             display: inline-block;
             background-color: $primary-color;
@@ -314,12 +314,13 @@ p {
             font-family: 'Cabin Sketch', cursive;
             font-weight: bold;
             text-align: center;
-            padding: 1.6em 1.2em;
-            font-size: 1.2em;
+            padding: 1.6em 1.2em 1em 1.2em;
+            font-size: 1.5em;
             max-width: 220px;
             width: 100%;
         }
         .event-content {
+        margin-left: 10px;
         display: inline-block;
             .event-title {
                 display: inline-block;
@@ -344,11 +345,16 @@ p {
     .contact-info {
         text-align: center;
         font-size: 1.2em;
+        padding: 4em 0 3em 0;
     }
     .contact {
         background-color: $primary-color;
         padding: 20px;
         #contact-form {
+            .error {
+                color: white;
+                background-color: red;
+            }
             p {
                 label {
                     width: 100%;
@@ -363,10 +369,12 @@ p {
                         border: 2px solid darken($primary-color, 15%);
                     }
                 }
-                input#id_message {
+                textarea#id_message {
+                    width: 100%;
                     min-height: 200px;
                 }
                 input.form-btn {
+                    float: right;
                     border: none;
                     color: white;
                     width: 20%;
@@ -483,6 +491,7 @@ video#bgvideo {
     }
     .content {
         .event-row {
+            margin: 0 auto 45px auto;
             text-align: center;
             border: none;
             .event-date {

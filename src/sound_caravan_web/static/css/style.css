@@ -658,7 +658,7 @@ p {
 .home {
   text-align: center;
   max-height: 650px;
-  padding: 10% 0;
+  padding: 10% 0 15% 0;
 }
 .home h1 {
   max-width: 500px;
@@ -840,7 +840,7 @@ p {
 .content .event-row {
   width: 75%;
   margin: 0 auto 15px auto;
-  border-bottom: solid 5px #2a9a9e;
+  border-bottom: solid 3px #2a9a9e;
 }
 .content .event-row .event-date {
   display: inline-block;
@@ -849,12 +849,13 @@ p {
   font-family: 'Cabin Sketch', cursive;
   font-weight: bold;
   text-align: center;
-  padding: 1.6em 1.2em;
-  font-size: 1.2em;
+  padding: 1.6em 1.2em 1em 1.2em;
+  font-size: 1.5em;
   max-width: 220px;
   width: 100%;
 }
 .content .event-row .event-content {
+  margin-left: 10px;
   display: inline-block;
 }
 .content .event-row .event-content .event-title {
@@ -879,10 +880,15 @@ p {
 .content .contact-info {
   text-align: center;
   font-size: 1.2em;
+  padding: 4em 0 3em 0;
 }
 .content .contact {
   background-color: #2a9a9e;
   padding: 20px;
+}
+.content .contact #contact-form .error {
+  color: white;
+  background-color: red;
 }
 .content .contact #contact-form p label {
   width: 100%;
@@ -896,10 +902,12 @@ p {
 .content .contact #contact-form p input:focus {
   border: 2px solid #1a5f62;
 }
-.content .contact #contact-form p input#id_message {
+.content .contact #contact-form p textarea#id_message {
+  width: 100%;
   min-height: 200px;
 }
 .content .contact #contact-form p input.form-btn {
+  float: right;
   border: none;
   color: white;
   width: 20%;
@@ -996,6 +1004,7 @@ video#bgvideo {
   }
 
   .content .event-row {
+    margin: 0 auto 45px auto;
     text-align: center;
     border: none;
   }
