@@ -152,9 +152,9 @@ class Contact(SingletonModel):
         max_length=255, blank=False, null=False,
         verbose_name=_(u'Twitter')
     )
-    myspace = models.CharField(
+    youtube = models.CharField(
         max_length=255, blank=False, null=False,
-        verbose_name=_(u'MySpace')
+        verbose_name=_(u'YouTube')
     )
 
     class Meta:
