@@ -200,7 +200,7 @@
                     <div class="success">{% trans 'Gracias! hemos recibido tu mensage.' %}</div>
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <input type="submit" value="{% trans 'send' %}" />
+                    <p><input type="submit" class="form-btn" value="{% trans 'Enviar' %}" /></p>
                 </form>
             </div>
         </div>

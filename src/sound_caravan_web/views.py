@@ -40,6 +40,7 @@ class ContactView(View):
             message += "Message:\n{}\n".format(form.cleaned_data['message'])
 
             send_mail("Contact from the web", message, "web@sound-caravan-web", [settings.CONTACT_EMAILS_DESTIONATION], fail_silently=True)
+
             return HttpResponse(json.dumps({"success": True}), content_type='application/json')
 
         return HttpResponseBadRequest(json.dumps(form.errors), content_type='application/json')
