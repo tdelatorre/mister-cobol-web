@@ -389,14 +389,24 @@ h4 {
 }
 
 .bg-darkgray {
-    background-color: $dark-gray;
+    background-color: darken($dark-gray, 15%);
+    background-image: url('../images/bg-drops2.png');
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .bg-white {
     background-color: white;
 }
 
-.bg-yellow {
+.bg-black {
+    background-color: black;
+    background-image: url('../images/bg-drops1.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.bg-primary-color {
     background-color: $primary-color;
 }
 
@@ -414,7 +424,7 @@ h4 {
 
 // SET LAYOUT
 .dashed {
-    border-bottom: 3px dashed $pearl-gray;
+    border-top: 5px solid $primary-color;
 }
 
 .translate-3d-menu {

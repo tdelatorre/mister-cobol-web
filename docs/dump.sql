@@ -517,7 +517,9 @@ CREATE TABLE sound_caravan_web_image (
     id integer NOT NULL,
     image character varying(100) NOT NULL,
     title character varying(50) NOT NULL,
-    for_gallery boolean NOT NULL
+    for_gallery boolean NOT NULL,
+    "order" smallint NOT NULL,
+    image_th character varying(100)
 );
 
 
@@ -553,7 +555,8 @@ CREATE TABLE sound_caravan_web_member (
     name character varying(100) NOT NULL,
     description text NOT NULL,
     image_id integer NOT NULL,
-    role character varying(100) NOT NULL
+    role character varying(100) NOT NULL,
+    "order" smallint NOT NULL
 );
 
 
@@ -1006,6 +1009,47 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 99	2014-07-17 12:50:45.352649+02	41	Tour	1		12	1
 100	2014-07-17 12:51:28.787022+02	1	Tour object	2	Modificado/a description y image.	14	1
 101	2014-07-17 12:52:21.135868+02	1	Video	2	Modificado/a title y video_script.	13	1
+102	2014-07-17 14:05:41.273579+02	1	Video	2	Modificado/a video_script.	13	1
+103	2014-07-17 14:06:50.879515+02	1	Video	2	Modificado/a video_script.	13	1
+104	2014-07-17 15:28:46.732375+02	4	Juanjo Marte	2	Modificado/a description.	9	1
+105	2014-07-17 15:29:09.637941+02	5	Carlos García	2	No ha cambiado ningún campo.	9	1
+106	2014-07-17 15:29:18.990576+02	4	Juanjo Marte	2	No ha cambiado ningún campo.	9	1
+107	2014-07-17 15:29:55.775414+02	6	Sergio Castañeda	2	No ha cambiado ningún campo.	9	1
+108	2014-07-17 15:29:58.956021+02	7	Fer García	2	No ha cambiado ningún campo.	9	1
+109	2014-07-17 15:36:00.896422+02	5	Carlos García	2	Modificado/a order.	9	1
+110	2014-07-17 15:36:10.948253+02	6	Sergio Castañeda	2	Modificado/a order.	9	1
+111	2014-07-17 15:36:16.634963+02	7	Fer García	2	Modificado/a order.	9	1
+112	2014-07-17 15:36:34.287983+02	4	Juanjo Marte	2	No ha cambiado ningún campo.	9	1
+113	2014-07-17 15:45:14.855622+02	41	Tour	2	Modificado/a image.	12	1
+114	2014-07-17 15:49:11.376946+02	41	Tour	2	Modificado/a image.	12	1
+115	2014-07-17 15:49:52.986832+02	41	Tour	2	Modificado/a image.	12	1
+116	2014-07-17 15:53:42.186636+02	18	fer2	2	Modificado/a image.	12	1
+117	2014-07-17 16:31:00.141393+02	40	sound_caravan5	3		12	1
+118	2014-07-17 16:31:34.035418+02	39	sound_caravan4	2	Modificado/a image_th.	12	1
+119	2014-07-17 16:31:41.262229+02	38	sound_caravan3	2	Modificado/a image_th.	12	1
+120	2014-07-17 16:31:48.194455+02	37	sound_caravan2	2	Modificado/a image_th.	12	1
+121	2014-07-17 16:31:56.234349+02	36	sound_caravan1	2	Modificado/a image_th.	12	1
+122	2014-07-17 16:32:06.194381+02	35	sergio7	2	Modificado/a image_th.	12	1
+123	2014-07-17 16:32:12.878387+02	34	sergio6	2	Modificado/a image_th.	12	1
+124	2014-07-17 16:32:24.099612+02	33	sergio5	2	Modificado/a image_th.	12	1
+125	2014-07-17 16:32:32.811235+02	32	sergio3	2	Modificado/a image_th.	12	1
+126	2014-07-17 16:32:43.111218+02	31	sergio2	2	Modificado/a image_th.	12	1
+127	2014-07-17 16:32:52.099847+02	30	sergio1	2	Modificado/a image_th.	12	1
+128	2014-07-17 16:32:59.546282+02	29	juanjo9	2	Modificado/a image_th.	12	1
+129	2014-07-17 16:33:07.784181+02	28	juanjo8	2	Modificado/a image_th.	12	1
+130	2014-07-17 16:33:15.706012+02	27	juanjo7	2	Modificado/a image_th.	12	1
+131	2014-07-17 16:33:23.903298+02	26	juanjo6	2	Modificado/a image_th.	12	1
+132	2014-07-17 16:33:33.13232+02	25	juanjo5	2	Modificado/a image_th.	12	1
+133	2014-07-17 16:33:41.594825+02	24	juanjo4	2	Modificado/a image_th.	12	1
+134	2014-07-17 16:33:50.825441+02	23	juanjo3	2	Modificado/a image_th.	12	1
+135	2014-07-17 16:34:12.365623+02	22	juanjo2	3		12	1
+136	2014-07-17 16:34:34.244327+02	21	juanjo1	2	Modificado/a image_th.	12	1
+137	2014-07-17 16:34:40.982005+02	20	fer4	2	Modificado/a image_th.	12	1
+138	2014-07-17 16:34:47.072638+02	19	fer3	2	Modificado/a image_th.	12	1
+139	2014-07-17 16:34:53.796895+02	18	fer2	2	Modificado/a image_th.	12	1
+140	2014-07-17 16:35:04.967675+02	17	fer1	2	Modificado/a image_th.	12	1
+141	2014-07-17 16:35:12.47258+02	16	carlos2	2	Modificado/a image_th.	12	1
+142	2014-07-17 16:35:20.473379+02	15	carlos1	2	Modificado/a image_th.	12	1
 \.
 
 
@@ -1013,7 +1057,7 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tere
 --
 
-SELECT pg_catalog.setval('django_admin_log_id_seq', 101, true);
+SELECT pg_catalog.setval('django_admin_log_id_seq', 142, true);
 
 
 --
@@ -1065,6 +1109,9 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 13	sound_caravan_web	0009_auto_20140717_1159	2014-07-17 12:21:45.459432+02
 14	sound_caravan_web	0010_auto_20140717_1221	2014-07-17 12:21:45.710608+02
 15	sound_caravan_web	0011_auto_20140717_1235	2014-07-17 12:35:27.482419+02
+16	sound_caravan_web	0012_member_order	2014-07-17 15:35:42.438391+02
+17	sound_caravan_web	0013_auto_20140717_1539	2014-07-17 15:39:51.916805+02
+18	sound_caravan_web	0014_image_image_th	2014-07-17 16:06:50.327334+02
 \.
 
 
@@ -1072,7 +1119,7 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tere
 --
 
-SELECT pg_catalog.setval('django_migrations_id_seq', 15, true);
+SELECT pg_catalog.setval('django_migrations_id_seq', 18, true);
 
 
 --
@@ -1157,38 +1204,36 @@ SELECT pg_catalog.setval('sound_caravan_web_home_id_seq', 1, true);
 -- Data for Name: sound_caravan_web_image; Type: TABLE DATA; Schema: public; Owner: tere
 --
 
-COPY sound_caravan_web_image (id, image, title, for_gallery) FROM stdin;
-10	images/member_juanjo.jpg	Juanjo Marte	f
-11	images/member_carlos.jpg	Carlos García	f
-12	images/member_sergio.jpg	Sergio Castañeda	f
-13	images/member_fer.jpg	Fer García	f
-15	images/carlos1.jpg	carlos1	t
-16	images/carlos2.jpg	carlos2	t
-17	images/fer1.jpg	fer1	t
-18	images/fer2.jpg	fer2	t
-19	images/fer3.jpg	fer3	t
-20	images/fer4.jpg	fer4	t
-21	images/juanjo1.jpg	juanjo1	t
-22	images/juanjo2.jpg	juanjo2	t
-23	images/juanjo3.jpg	juanjo3	t
-24	images/juanjo4.jpg	juanjo4	t
-25	images/juanjo5.jpg	juanjo5	t
-26	images/juanjo6.jpg	juanjo6	t
-27	images/juanjo7.jpg	juanjo7	t
-28	images/juanjo8.jpg	juanjo8	t
-29	images/juanjo9.jpg	juanjo9	t
-30	images/sergio1.jpg	sergio1	t
-31	images/sergio2.jpg	sergio2	t
-32	images/sergio3.jpg	sergio3	t
-33	images/sergio5.jpg	sergio5	t
-34	images/sergio6.jpg	sergio6	t
-35	images/sergio7.jpg	sergio7	t
-36	images/sound_caravan1.jpg	sound_caravan1	t
-37	images/sound_caravan2.jpg	sound_caravan2	t
-38	images/sound_caravan3.jpg	sound_caravan3	t
-39	images/sound_caravan4.jpg	sound_caravan4	t
-40	images/sound_caravan5.jpg	sound_caravan5	t
-41	images/tour2.JPG	Tour	f
+COPY sound_caravan_web_image (id, image, title, for_gallery, "order", image_th) FROM stdin;
+10	images/member_juanjo.jpg	Juanjo Marte	f	1	\N
+11	images/member_carlos.jpg	Carlos García	f	1	\N
+12	images/member_sergio.jpg	Sergio Castañeda	f	1	\N
+13	images/member_fer.jpg	Fer García	f	1	\N
+41	images/tour.jpg	Tour	f	1	\N
+39	images/sound_caravan4.jpg	sound_caravan4	t	1	images/sound_caravan4_th.jpg
+38	images/sound_caravan3.jpg	sound_caravan3	t	1	images/sound_caravan3_th.jpg
+37	images/sound_caravan2.jpg	sound_caravan2	t	1	images/sound_caravan2_th.jpg
+36	images/sound_caravan1.jpg	sound_caravan1	t	1	images/sound_caravan1_th.jpg
+35	images/sergio7.jpg	sergio7	t	1	images/sergio7_th.jpg
+34	images/sergio6.jpg	sergio6	t	1	images/sergio6_th.jpg
+33	images/sergio5.jpg	sergio5	t	1	images/sergio5_th.jpg
+32	images/sergio3.jpg	sergio3	t	1	images/sergio3_th.jpg
+31	images/sergio2.jpg	sergio2	t	1	images/sergio2_th.jpg
+30	images/sergio1.jpg	sergio1	t	1	images/sergio1_th.jpg
+29	images/juanjo9.jpg	juanjo9	t	1	images/juanjo9_th.jpg
+28	images/juanjo8.jpg	juanjo8	t	1	images/juanjo8_th.jpg
+27	images/juanjo7.jpg	juanjo7	t	1	images/sergio7_th_1.jpg
+26	images/juanjo6.jpg	juanjo6	t	1	images/juanjo6_th.jpg
+25	images/juanjo5.jpg	juanjo5	t	1	images/juanjo5_th.jpg
+24	images/juanjo4.jpg	juanjo4	t	1	images/juanjo4_th.jpg
+23	images/juanjo3.jpg	juanjo3	t	1	images/juanjo3_th.jpg
+21	images/juanjo1.jpg	juanjo1	t	1	images/juanjo1_th.jpg
+20	images/fer4.jpg	fer4	t	1	images/fer4_th.jpg
+19	images/fer3.jpg	fer3	t	1	images/fer3_th.jpg
+18	images/fer2_1.JPG	fer2	t	1	images/fer2_th.jpg
+17	images/fer1.jpg	fer1	t	1	images/fer1_th.jpg
+16	images/carlos2.jpg	carlos2	t	1	images/carlos2_th.jpg
+15	images/carlos1.jpg	carlos1	t	1	images/carlos1_th.jpg
 \.
 
 
@@ -1203,11 +1248,11 @@ SELECT pg_catalog.setval('sound_caravan_web_image_id_seq', 41, true);
 -- Data for Name: sound_caravan_web_member; Type: TABLE DATA; Schema: public; Owner: tere
 --
 
-COPY sound_caravan_web_member (id, name, description, image_id, role) FROM stdin;
-4	Juanjo Marte	En 1999 entra en la formación de Gasóleo, grupo de Rock sureño,en Fuenlabrada. Tras años de multitud de conciertos en 2003, entra a formar parte de Súkubo, donde ya militaba Carlos, con el que tambien coincide en No Roots, en 2006, y con el que finalmente monta Sound Caravan en 2008.itarra. A finales de la década de los '90 forma Súkubo, grupo de Metal, con su hermano y unos amigos,en Móstoles. Compaginando la guitarra con sus estudios como técnico de sonido pasa el tiempo, hasta 2006 que forma No Roots, ya compartiendo formación con Juanjo. En 2008 ambos fundan Sound Caravan.	10	Voz
-5	Carlos García	A finales de la década de los '90 forma Súkubo, grupo de Metal, con su hermano y unos amigos,en Móstoles. Compaginando la guitarra con sus estudios como técnico de sonido pasa el tiempo, hasta 2006 que forma No Roots, ya compartiendo formación con Juanjo. En 2008 ambos fundan Sound Caravan.	11	Guitarra
-6	Sergio Castañeda	Su carrera como músico se inicia en 1990, en Móstoles (Madrid) con Mac and The Reapers. Luego siguieron Icaros en 1998 y, ya en 2001,  el grupo de versiones de clasicos del  rock Rock Factory. En 2009 entra a formar parte de Sound Caravan.	12	Bajo
-7	Fer García	Todo empieza en su Granada natal, tras varios años de aprendidaje en The Vicious Garden, en 2009 forma Koda, con los que está hasta 2011, año de su llegada a Madrid. En 2012, ya en la capital, entra a formar parte de Pray for Mojo, hasta 2013, que entra en Sound Caravan.  	13	Batería
+COPY sound_caravan_web_member (id, name, description, image_id, role, "order") FROM stdin;
+5	Carlos García	A finales de la década de los '90 forma Súkubo, grupo de Metal, con su hermano y unos amigos,en Móstoles. Compaginando la guitarra con sus estudios como técnico de sonido pasa el tiempo, hasta 2006 que forma No Roots, ya compartiendo formación con Juanjo. En 2008 ambos fundan Sound Caravan.	11	Guitarra	2
+6	Sergio Castañeda	Su carrera como músico se inicia en 1990, en Móstoles (Madrid) con Mac and The Reapers. Luego siguieron Icaros en 1998 y, ya en 2001,  el grupo de versiones de clasicos del  rock Rock Factory. En 2009 entra a formar parte de Sound Caravan.	12	Bajo	3
+7	Fer García	Todo empieza en su Granada natal, tras varios años de aprendidaje en The Vicious Garden, en 2009 forma Koda, con los que está hasta 2011, año de su llegada a Madrid. En 2012, ya en la capital, entra a formar parte de Pray for Mojo, hasta 2013, que entra en Sound Caravan.  	13	Batería	4
+4	Juanjo Marte	En 1999 entra en la formación de Gasóleo, grupo de Rock sureño,en Fuenlabrada. Tras años de multitud de conciertos en 2003, entra a formar parte de Súkubo, donde ya militaba Carlos, con el que tambien coincide en No Roots, en 2006, y con el que finalmente monta Sound Caravan en 2008	10	Voz	1
 \.
 
 
@@ -1239,7 +1284,7 @@ SELECT pg_catalog.setval('sound_caravan_web_tour_id_seq', 2, true);
 --
 
 COPY sound_caravan_web_video (id, video_script, title) FROM stdin;
-1	<iframe src="//player.vimeo.com/hubnut/user/user30205384/uploaded_videos?color=ffffff&amp;background=000000&amp;slideshow=0&amp;video_title=1&amp;video_byline=1" width="1280" height="720" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>	Video
+1	<iframe src="//player.vimeo.com/hubnut/user/user30205384/uploaded_videos?color=ffffff&amp;background=000000&amp;slideshow=0&amp;video_title=1&amp;video_byline=1" width="100%" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>	Video
 \.
 
 

@@ -13,9 +13,10 @@
 
 body {
     font-family: 'Gotham', sans-serif;
-    color: $medium-gray;
+    color: $light-gray;
     line-height: 1.5;
-    background: url('') 50% 0 repeat fixed;
+    background: url('../images/bg-res.jpg') 50% 0 repeat fixed;
+    background-position: center top;
 }
 
 p {
@@ -35,7 +36,7 @@ p {
 
 .row-title {
     font-family: 'Cabin Sketch', cursive;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -45,28 +46,28 @@ p {
 .header {
     height: 120px;
     margin-top: 20px;
-    .main-logo {
-        display: inline-block;
-        max-width: 1000px;
-        width: 100%;
-        margin-left: -500px;
-    }
     .nav {
-        max-width: 900px;
-        width: auto;
-        float: right;
+        font-family: 'Cabin Sketch', cursive;
+        max-width: 1200px;
+        width: 100%;
         list-style: none;
-        margin: 2.2em 5% 0 0;
+        margin: 2.2em auto;
         z-index: 1;
         li {
             display: inline-block;
+            &.main-logo {
+                vertical-align: middle;
+                width: 100%;
+                max-width: 300px;
+            }
             a {
-                display: block;
+                vertical-align: middle;
+                display: inline-block;
                 color: white;
                 font-weight: 500;
                 text-transform: uppercase;
                 text-decoration: none;
-                font-size: 1em;
+                font-size: 1.2em;
                 padding: 0.5em 0.8em;
                 &:hover {
                     background-color: rgba(255,255,255,.3);
@@ -87,6 +88,12 @@ p {
             width: 100%;
             z-index: 1;
             -webkit-transform: translateZ(0);
+            li {
+                &.main-logo {
+                    margin-top: -15px;
+                    max-width: 150px;
+                }
+            }
         }
     }
     .nav-res-btn {
@@ -104,6 +111,7 @@ p {
         }
     }
     .nav-res {
+        font-family: 'Cabin Sketch', cursive;
         display: none;
         list-style: none;
         position: fixed;
@@ -117,13 +125,13 @@ p {
             a {
                 width: 100%;
                 padding: 0.6em;
-                border-bottom: 1px solid $medium-gray;
-                color: $medium-gray;
+                border-bottom: 1px solid black;
+                color: white;
                 display: block;
-                background-color: $light-gray;
+                background-color: $primary-color;
                 &:hover {
                     color: white;
-                    background-color: $primary-color;
+                    background-color: black;
                 }
             }
         }
@@ -133,15 +141,12 @@ p {
 .home {
     text-align: center;
     max-height: 650px;
-    padding: 6% 0 16% 0;
+    padding: 6% 0 6% 0;
     h1 {
         text-indent: -1000em;
         max-width: 500px;
         width: 100%;
-        height: 455px;
-        background-image: url('');
-        background-repeat: no-repeat;;
-        background-size: 100%;
+        height: 300px;
         margin: 0 auto;
         &:hover {
             @include scale-3d(1.1);
@@ -247,13 +252,12 @@ p {
         box-shadow: none !important;
     }
 
-    #carousel.flexslider {
-        overflow: hidden;
-        height: 150px;
+    #carousel.flexslider img {
+        height: auto;
+        width: 100% !important;
     }
-    
+
     .flex-viewport {
-        height: 600px;
         .slides {
             img {
                 height: 600px;
@@ -340,9 +344,6 @@ video#bgvideo {
 // RESPONSIVE
 @media screen and (max-width: 1480px) {
     .header {
-        .main-logo {
-            margin-left: -750px;
-        }
         .nav {
             margin-right: 2%;
         }
@@ -366,9 +367,6 @@ video#bgvideo {
 
 @media screen and (max-width: 900px) {
     .header {
-        .main-logo {
-            margin-left: -300px;
-        }
         .nav {
             display: none;
         }
@@ -395,11 +393,6 @@ video#bgvideo {
 }
 
 @media screen and (max-width: 500px) {
-    .header {
-        .main-logo {
-            margin-left: -200px;
-        }
-    }
     .menus {
         .menu-item { float: none; }
     }
