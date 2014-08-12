@@ -4,6 +4,9 @@ jQuery(document).ready(function() {
     $('.nav-res-btn').click(function() {
         $('.nav-res').slideToggle("fast");
     });
+    $('.nav-res li').click(function() {
+        $('.nav-res').slideToggle("fast");
+    });
 
 });
 
