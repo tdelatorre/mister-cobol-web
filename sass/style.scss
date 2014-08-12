@@ -164,76 +164,6 @@ p {
     }
 }
 
-.premios {
-    .premios-list {
-        .col-1of3 {
-            margin-top: 30px;
-            padding: 2%;
-            text-align: center;
-            min-height: 675px;
-            ul {
-                li {
-                    padding: 20px;
-                    margin: 10px 0;
-                    font-size: 0.9em;
-                    background-color: darken(white, 3%);
-                }
-            }
-            &.oro {
-                background-color: $light-gray;
-                h3 {
-                    @include ribbon(30px, 15px, $primary-color, $light-gray);
-                    color: white;
-                }
-            }
-            &.plata {
-                background-color: $light-gray;
-                h3 {
-                    @include ribbon(30px, 15px, lighten($medium-gray, 15%), $light-gray);
-                    color: white;
-                }
-            }
-            &.bronce {
-                background-color: $light-gray;
-                h3 {
-                    @include ribbon(30px, 15px, darken($primary-color, 15%), $light-gray);
-                    color: white;
-                }
-            }
-            &.videoblog {
-                background-color: $light-gray;
-                min-height: 590px;
-                h3 {
-                    @include ribbon(30px, 15px, $google, $light-gray);
-                    color: white;
-                    font-size: 1em;
-                }
-            }
-            &.diseno {
-                background-color: $light-gray;
-                min-height: 590px;
-                h3 {
-                    @include ribbon(30px, 15px, $twitter, $light-gray);
-                    color: white;
-                    font-size: 1em;
-                }
-            }
-            &.femenina {
-                background-color: $light-gray;
-                min-height: 590px;
-                h3 {
-                    @include ribbon(30px, 15px, $flickr, $light-gray);
-                    color: white;
-                    font-size: 1em;
-                }
-            }
-        }
-        .col-1of2 {
-            min-height: 330px;
-        }
-    }
-}
-
 .about-us {
     margin-top: 30px;
     img {
@@ -278,28 +208,6 @@ p {
             }
         }
     }
-
-.patrocina {
-    background-color: white;
-    padding: 8px;
-    text-align: center;
-    min-height: 64px;
-    margin-top: 35px;
-    margin-bottom: 25px;
-    p {
-        font-size: 0.8em;
-        margin: 0;
-        img {
-            max-width: 140px;
-            vertical-align: middle;
-            margin-left: 2px;
-        }
-    }
-}
-
-#concurso, #premios {
-    text-align: justify;
-}
 
 .content {
     padding: 80px 0;
@@ -475,11 +383,6 @@ video#bgvideo {
     }
     .menus {
         .menu-item { float: left; }
-    }
-    .premios {
-        .premios-list {
-            .col-1of3 { min-height: 100% !important; }
-        }
     }
     .about-us {
         img {

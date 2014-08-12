@@ -681,100 +681,6 @@ p {
   margin-top: 20px;
 }
 
-.premios .premios-list .col-1of3 {
-  margin-top: 30px;
-  padding: 2%;
-  text-align: center;
-  min-height: 675px;
-}
-.premios .premios-list .col-1of3 ul li {
-  padding: 20px;
-  margin: 10px 0;
-  font-size: 0.9em;
-  background-color: #f7f7f7;
-}
-.premios .premios-list .col-1of3.oro {
-  background-color: #efefef;
-}
-.premios .premios-list .col-1of3.oro h3 {
-  background-color: #2a9a9e;
-  border-top: 30px solid #2a9a9e;
-  border-bottom: 30px solid #2a9a9e;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-}
-.premios .premios-list .col-1of3.plata {
-  background-color: #efefef;
-}
-.premios .premios-list .col-1of3.plata h3 {
-  background-color: #a2a2a2;
-  border-top: 30px solid #a2a2a2;
-  border-bottom: 30px solid #a2a2a2;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-}
-.premios .premios-list .col-1of3.bronce {
-  background-color: #efefef;
-}
-.premios .premios-list .col-1of3.bronce h3 {
-  background-color: #1a5f62;
-  border-top: 30px solid #1a5f62;
-  border-bottom: 30px solid #1a5f62;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-}
-.premios .premios-list .col-1of3.videoblog {
-  background-color: #efefef;
-  min-height: 590px;
-}
-.premios .premios-list .col-1of3.videoblog h3 {
-  background-color: #dd4b39;
-  border-top: 30px solid #dd4b39;
-  border-bottom: 30px solid #dd4b39;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-  font-size: 1em;
-}
-.premios .premios-list .col-1of3.diseno {
-  background-color: #efefef;
-  min-height: 590px;
-}
-.premios .premios-list .col-1of3.diseno h3 {
-  background-color: #00aced;
-  border-top: 30px solid #00aced;
-  border-bottom: 30px solid #00aced;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-  font-size: 1em;
-}
-.premios .premios-list .col-1of3.femenina {
-  background-color: #efefef;
-  min-height: 590px;
-}
-.premios .premios-list .col-1of3.femenina h3 {
-  background-color: #ff0084;
-  border-top: 30px solid #ff0084;
-  border-bottom: 30px solid #ff0084;
-  border-left: 15px solid #efefef;
-  border-right: 15px solid #efefef;
-  line-height: 0;
-  color: white;
-  font-size: 1em;
-}
-.premios .premios-list .col-1of2 {
-  min-height: 330px;
-}
-
 .about-us {
   margin-top: 30px;
 }
@@ -810,28 +716,6 @@ p {
 
 .flex-direction-nav li a {
   color: white !important;
-}
-
-.patrocina {
-  background-color: white;
-  padding: 8px;
-  text-align: center;
-  min-height: 64px;
-  margin-top: 35px;
-  margin-bottom: 25px;
-}
-.patrocina p {
-  font-size: 0.8em;
-  margin: 0;
-}
-.patrocina p img {
-  max-width: 140px;
-  vertical-align: middle;
-  margin-left: 2px;
-}
-
-#concurso, #premios {
-  text-align: justify;
 }
 
 .content {
@@ -990,10 +874,6 @@ video#bgvideo {
 
   .menus .menu-item {
     float: left;
-  }
-
-  .premios .premios-list .col-1of3 {
-    min-height: 100% !important;
   }
 
   .about-us img {

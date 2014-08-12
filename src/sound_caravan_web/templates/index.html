@@ -40,9 +40,6 @@
     <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css">
     <script src="/static/js/jquery.flexslider.js"></script>
 
-    <!-- remove livereload -->
-    <script src="http://localhost:35729/livereload.js"></script>
-
     <!-- WAYPOINTS -->
     <script type="text/javascript">
         jQuery(function($) {
@@ -62,11 +59,9 @@
             });
         });
     </script>
-
 </head>
 
 <body>
-
     <div class="row" id="inicio">
         <div class="header">
             <ul class="nav">
@@ -174,7 +169,7 @@
         </div>
     </div>
 
-    <div class="row bg-black premios dashed" id="videos">
+    <div class="row bg-black dashed" id="videos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'VIDEOS' %}</h2>
             {% get_solo 'sound_caravan_web.Video' as video %}
@@ -230,8 +225,6 @@
         {% endif %}
     </video>
 
-</body>
-
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             // The slider being synced must be initialized first
@@ -254,4 +247,6 @@
             });
         });
     </script>
+</body>
+
 </html>
