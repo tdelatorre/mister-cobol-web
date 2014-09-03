@@ -23,9 +23,24 @@ module.exports = function(grunt) {
                 files: '**/*.scss',
                 tasks: ['sass']
             },
+            coffee: {
+                files: 'coffee/*.coffee',
+                tasks: ['coffee']
+            },
+            uglify: {
+                files: 'src/sound_caravan_web/static/js/features.js',
+                tasks: ['uglify']
+            },
             options: {
                 livereload: true
             }
+        },
+        coffee: {
+            compile: {
+                files: {
+                    'src/sound_caravan_web/static/js/features.js': 'coffee/features.coffee'
+                }
+            },
         },
         uglify: {
             my_target: {
@@ -38,6 +53,7 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-livereload');
