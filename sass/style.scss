@@ -35,7 +35,7 @@ p {
 }
 
 .row-title {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 3em;
     font-weight: bold;
     width: 100%;
@@ -47,7 +47,7 @@ p {
     height: 120px;
     margin-top: 20px;
     .nav {
-        font-family: 'Cabin Sketch', cursive;
+        font-family: 'Oswald', sans-serif;
         max-width: 1200px;
         width: 100%;
         list-style: none;
@@ -115,7 +115,7 @@ p {
         }
     }
     .nav-res {
-        font-family: 'Cabin Sketch', cursive;
+        font-family: 'Oswald', sans-serif;
         display: none;
         list-style: none;
         position: fixed;
@@ -174,7 +174,7 @@ p {
     }
     .member-name {
         color: $primary-color;
-        font-family: 'Cabin Sketch', cursive;
+        font-family: 'Oswald', sans-serif;
         font-size: 2em;
     }
 }
@@ -219,7 +219,7 @@ p {
             display: inline-block;
             background-color: $primary-color;
             color: white;
-            font-family: 'Cabin Sketch', cursive;
+            font-family: 'Oswald', sans-serif;
             font-weight: bold;
             text-align: center;
             padding: 1.6em 1.2em 1em 1.2em;
@@ -232,11 +232,18 @@ p {
         display: inline-block;
             .event-title {
                 display: inline-block;
-                font-family: 'Cabin Sketch', cursive;
+                font-family: 'Oswald', sans-serif;
                 font-size: 2em;
             }
             .event-description { color: $primary-color;}
             .event-data {}
+        }
+        &.current {
+            border-bottom: solid 3px white;
+            .event-date {
+                background-color: white;
+                color: $primary-color;
+            }
         }
     }
     .share-btn {
