@@ -11,10 +11,12 @@ $ ->
     $(window).scroll ->
         if ($(this).scrollTop() > 400)
             nav.addClass("f-nav")
-            $('.main-logo img').show()
+            $('.main-logo').css({
+                display: "inline-block"
+            })
         else
             nav.removeClass("f-nav")
-            $('.main-logo img').hide()
+            $('.main-logo').hide()
 
 # SMOOTH SCROLL
 $ ->

@@ -57,11 +57,11 @@ p {
         li {
             display: inline-block;
             &.main-logo {
+                display: none;
                 vertical-align: middle;
                 width: 100%;
                 max-width: 300px;
                 img {
-                    display: none;
                 }
             }
             a {

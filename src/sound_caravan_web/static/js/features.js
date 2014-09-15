@@ -14,10 +14,12 @@
     return $(window).scroll(function() {
       if ($(this).scrollTop() > 400) {
         nav.addClass("f-nav");
-        return $('.main-logo img').show();
+        return $('.main-logo').css({
+          display: "inline-block"
+        });
       } else {
         nav.removeClass("f-nav");
-        return $('.main-logo img').hide();
+        return $('.main-logo').hide();
       }
     });
   });

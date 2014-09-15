@@ -571,12 +571,10 @@ p {
   display: inline-block;
 }
 .header .nav li.main-logo {
+  display: none;
   vertical-align: middle;
   width: 100%;
   max-width: 300px;
-}
-.header .nav li.main-logo img {
-  display: none;
 }
 .header .nav li a {
   vertical-align: middle;
