@@ -110,6 +110,11 @@ class Event(models.Model):
         max_length=50, blank=False, null=False,
         verbose_name=_(u'Price')
     )
+    highlighted = models.BooleanField(
+        blank=False, null=False,
+        default=False,
+        verbose_name=_(u'Highlighted')
+    )
 
     class Meta:
         verbose_name = _(u'Event')

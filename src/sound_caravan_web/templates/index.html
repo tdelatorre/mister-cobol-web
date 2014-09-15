@@ -119,7 +119,7 @@
             </div>
 
             {% for event in events  %}
-                <div class="event-row">
+                <div class="event-row {% if event.highlighted %}current{% endif %}">
                     <div class="event-date">{{ event.event_date|date:"d" }} {{ event.event_date|date:"F" }}<br>
                         <span>{{event.event_date|date:"Y" }}</span>
                     </div>
