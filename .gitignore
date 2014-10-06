@@ -4,6 +4,7 @@ __pycache__/
 /src/media
 node_modules/
 .sass-cache
+src/sound_caravan_web/settings/local.py
 
 # C extensions
 *.so
