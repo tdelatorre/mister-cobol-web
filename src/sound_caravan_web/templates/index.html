@@ -126,7 +126,7 @@
                     <div class="event-content">
                         <div class="event-title">{{ event.title }}</div>
                         <div class="event-description">{{ event.description }}</div>
-                        <div class="event-data">{{ event.location }}, {{ event.event_hour }}, {{ event.price }}</div>
+                        <div class="event-data">{{ event.location }}, {{ event.event_hour|time:"H:i" }}, {{ event.price }}</div>
                     </div>
                 </div>
             {% endfor %}
