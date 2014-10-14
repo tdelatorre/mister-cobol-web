@@ -19,12 +19,14 @@ class LandingView(TemplateView):
         members = Member.objects.all()
         events = Event.objects.all()
         images = Image.objects.filter(for_gallery=True)
+        videos = Video.objects.all()
 
         context = super().get_context_data(**kwargs)
         context.update({
             'members': members,
             'events': events,
             'images': images,
+            'videos': videos,
             'form': ContactForm(),
         })
         return context

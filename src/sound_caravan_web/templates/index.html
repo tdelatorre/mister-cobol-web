@@ -30,6 +30,7 @@
 
     <!-- Flexslider photo gallery -->
     <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css">
+    <script src="/static/js/plugins/jquery.fitvids.js"></script>
     <script src="/static/js/jquery.flexslider.js"></script>
 
     <!-- WAYPOINTS -->
@@ -164,8 +165,14 @@
     <div class="row bg-black dashed" id="videos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'VIDEOS' %}</h2>
-            {% get_solo 'sound_caravan_web.Video' as video %}
-            {{ video.video_script|safe }}
+
+            <div id="video-slider" class="flexslider">
+                <ul class="slides">
+                    {% for video in videos %}
+                        <li>{{ video.video_script|safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -236,6 +243,15 @@
                 animationLoop: false,
                 slideshow: false,
                 sync: "#carousel"
+            });
+
+            $('#video-slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                video: true,
+                useCSS: false
             });
         });
     </script>

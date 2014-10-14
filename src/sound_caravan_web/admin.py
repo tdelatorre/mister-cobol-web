@@ -5,7 +5,7 @@ from .models import *
 
 
 admin.site.register(Image)
-admin.site.register(Video, SingletonModelAdmin)
+admin.site.register(Video)
 admin.site.register(Home, SingletonModelAdmin)
 admin.site.register(AboutUs, SingletonModelAdmin)
 admin.site.register(Member)

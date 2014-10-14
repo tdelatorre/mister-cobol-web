@@ -202,19 +202,24 @@ class Image(models.Model):
         return u'{}'.format(self.title)
 
 
-class Video(SingletonModel):
+class Video(models.Model):
     title = models.CharField(
         max_length=50, blank=False, null=False,
         verbose_name=_(u'Title')
     )
     video_script = models.TextField(
         blank=False, null=False,
-        verbose_name=_(u'Video List Script')
+        verbose_name=_(u'Video Script')
+    )
+    order = models.SmallIntegerField(
+        blank=False, null=False,
+        verbose_name=_(u'order')
     )
 
     class Meta:
         verbose_name = _(u'Video')
-        verbose_name_plural = _(u'Video')
+        verbose_name_plural = _(u'Videos')
+        ordering = ['order']
 
     def __unicode__(self):
         return u'{}'.format(self.title)
