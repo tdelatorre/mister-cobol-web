@@ -116,7 +116,7 @@
             <img class="img-hide left" src="{{ tour.image.image.url }}" alt="Tour">
 
             <div class="row-center" style="margin: 40px 0;">
-                <p>{{ tour.description }}</p>
+                <p>{{ tour.description|safe }}</p>
             </div>
 
             {% for event in events  %}
