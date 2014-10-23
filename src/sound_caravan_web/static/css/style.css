@@ -133,12 +133,12 @@ strong {
 }
 
 ::selection {
-  background: #A30606;
+  background: #a30606;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: #A30606;
+  background: #a30606;
   text-shadow: none;
 }
 
@@ -153,7 +153,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #A30606;
+  color: #a30606;
 }
 
 .row {
@@ -165,7 +165,7 @@ a:hover {
 .row .row-inside {
   max-width: 1200px;
   width: 100%;
-  display: table;
+  display: block;
   margin: 0 auto;
 }
 .row .row-center {
@@ -216,7 +216,7 @@ h4 {
   color: white;
 }
 .title-inside-big a:hover, .title-inside-small a:hover {
-  color: #A30606;
+  color: #a30606;
 }
 
 .title-inside-small {
@@ -267,7 +267,7 @@ h4 {
   border-bottom: 1px solid #d2d2d2;
 }
 .btn.btn-yellow {
-  background-color: #A30606;
+  background-color: #a30606;
   color: white;
   border-bottom: 4px solid #850505;
 }
@@ -342,7 +342,7 @@ h4 {
   background-color: #474747;
 }
 .share-bar a:hover {
-  background-color: #A30606;
+  background-color: #a30606;
 }
 .share-bar a.text {
   font-size: 0.8em;
@@ -404,7 +404,7 @@ h4 {
 }
 .msg.msg-yellow {
   color: white;
-  background-color: #A30606;
+  background-color: #a30606;
   border-bottom: 4px solid #590303;
 }
 
@@ -429,7 +429,7 @@ h4 {
 }
 
 .bg-primary-color {
-  background-color: #A30606;
+  background-color: #a30606;
 }
 
 .title-darkgray {
@@ -437,7 +437,7 @@ h4 {
 }
 
 .title-yellow {
-  color: #A30606;
+  color: #a30606;
 }
 
 .title-white {
@@ -445,7 +445,7 @@ h4 {
 }
 
 .dashed {
-  border-top: 5px solid #A30606;
+  border-top: 5px solid #a30606;
 }
 
 .translate-3d-menu {
@@ -596,7 +596,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #A30606;
+  background-color: #a30606;
   margin: 0;
   max-width: 100%;
   text-align: center;
@@ -611,7 +611,7 @@ p {
 .header .nav-res-btn {
   display: none;
   color: white;
-  background-color: #A30606;
+  background-color: #a30606;
   position: fixed;
   top: 15px;
   right: 0;
@@ -640,7 +640,7 @@ p {
   border-bottom: 1px solid black;
   color: white;
   display: block;
-  background-color: #A30606;
+  background-color: #a30606;
 }
 .header .nav-res li a:hover {
   color: white;
@@ -683,7 +683,7 @@ p {
   width: 70%;
 }
 .about-us .member-name {
-  color: #A30606;
+  color: #a30606;
   font-family: 'Oswald', sans-serif;
   font-size: 2em;
 }
@@ -716,11 +716,11 @@ p {
 .content .event-row {
   width: 75%;
   margin: 0 auto 15px auto;
-  border-bottom: solid 3px #A30606;
+  border-bottom: solid 3px #a30606;
 }
 .content .event-row .event-date {
   display: inline-block;
-  background-color: #A30606;
+  background-color: #a30606;
   color: white;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
@@ -740,14 +740,14 @@ p {
   font-size: 2em;
 }
 .content .event-row .event-content .event-description {
-  color: #A30606;
+  color: #a30606;
 }
 .content .event-row.current {
   border-bottom: solid 3px white;
 }
 .content .event-row.current .event-date {
   background-color: white;
-  color: #A30606;
+  color: #a30606;
 }
 .content .share-btn {
   display: inline-block !important;
@@ -766,7 +766,7 @@ p {
   padding: 4em 0 3em 0;
 }
 .content .contact {
-  background-color: #A30606;
+  background-color: #a30606;
   padding: 20px;
 }
 .content .contact #contact-form .error {
@@ -801,7 +801,7 @@ p {
 }
 .content .contact #contact-form p input.form-btn:hover {
   background-color: white;
-  color: #A30606;
+  color: #a30606;
 }
 
 .img-hide, .col-1of3 {
@@ -896,5 +896,6 @@ video#bgvideo {
     float: none;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+#contacto .row .row-inside {
+  overflow: hidden;
+}
