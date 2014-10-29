@@ -769,6 +769,9 @@ p {
   background-color: #a30606;
   padding: 20px;
 }
+.content .contact #contact-form {
+  overflow: hidden;
+}
 .content .contact #contact-form .error {
   color: white;
   background-color: red;
@@ -793,7 +796,8 @@ p {
   float: right;
   border: none;
   color: white;
-  width: 20%;
+  width: auto;
+  min-width: 100px;
   font-size: 1.2em;
   background-color: #590303;
   text-align: center;

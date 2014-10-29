@@ -266,6 +266,7 @@ p {
         background-color: $primary-color;
         padding: 20px;
         #contact-form {
+            overflow: hidden;
             .error {
                 color: white;
                 background-color: red;
@@ -292,7 +293,8 @@ p {
                     float: right;
                     border: none;
                     color: white;
-                    width: 20%;
+                    width: auto;
+                    min-width: 100px;
                     font-size: 1.2em;
                     background-color: darken($primary-color, 15%);
                     text-align: center;
