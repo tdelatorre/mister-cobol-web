@@ -32,26 +32,6 @@
     <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css">
     <script src="/static/js/plugins/jquery.fitvids.js"></script>
     <script src="/static/js/jquery.flexslider.js"></script>
-
-    <!-- WAYPOINTS -->
-    <script type="text/javascript">
-        jQuery(function($) {
-            $('.img-hide').waypoint(function() {
-                $(this).toggleClass( 'bounceIn animated' );
-            },
-            {
-                offset: '70%',
-                triggerOnce: true
-            });
-            $('.col-1of3').waypoint(function() {
-                $(this).toggleClass( 'fadeInUp animated' );
-            },
-            {
-                offset: '70%',
-                triggerOnce: true
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -98,7 +78,7 @@
 
             {% for member in members %}
                 <div class="row about-us">
-                    <img class="img-hide left" src="{{ member.image.image.url }}" alt="{{ member.name }}">
+                    <img class="left" src="{{ member.image.image.url }}" alt="{{ member.name }}">
 
                     <div style="margin-top: 40px;" class="about-us-text right last">
                         <p class="member-name"><strong>{{ member.name }}</strong> ({{ member.role }})</p>
@@ -113,7 +93,7 @@
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'TOUR' %}</h2>
             {% get_solo 'sound_caravan_web.Tour' as tour %}
-            <img class="img-hide left" src="{{ tour.image.image.url }}" alt="Tour">
+            <img class="left" src="{{ tour.image.image.url }}" alt="Tour">
 
             <div class="row-center" style="margin: 40px 0;">
                 <p>{{ tour.description|safe }}</p>
