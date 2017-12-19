@@ -71,7 +71,7 @@
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'SOBRE NOSOTROS' %}</h2>
 
-            {% get_solo 'sound_caravan_web.AboutUs' as about_us %}
+            {% get_solo 'mister_cobol_web.AboutUs' as about_us %}
             <div class="row-center" style="margin: 0px 0;">
                 <p>{{ about_us.description }}</p>
             </div>
@@ -92,7 +92,7 @@
     <div class="row bg-black dashed" id="tour">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'TOUR' %}</h2>
-            {% get_solo 'sound_caravan_web.Tour' as tour %}
+            {% get_solo 'mister_cobol_web.Tour' as tour %}
             <img class="left" src="{{ tour.image.image.url }}" alt="Tour">
 
             <div class="row-center" style="margin: 40px 0;">
@@ -147,7 +147,7 @@
             <h2 class="row-title">{% trans 'VÍDEOS' %}</h2>
 
             <div id="video-slider" class="flexslider">
-                <ul class="slides">
+                <ul class="slides" style="text-align: center;">
                     {% for video in videos %}
                         <li>{{ video.video_script|safe }}</li>
                     {% endfor %}
@@ -159,7 +159,7 @@
     <div class="row bg-darkgray dashed" id="contacto">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'CONTACTA CON NOSOTROS' %}</h2>
-            {% get_solo 'sound_caravan_web.Contact' as contact %}
+            {% get_solo 'mister_cobol_web.Contact' as contact %}
             <div class="col-1of2 contact-info">
                 <p>{{ contact.address }}</p>
                 <p>{{ contact.email1 }}</p>
@@ -191,7 +191,7 @@
     </div>
 
     <div class="overlay"></div>
-    {% get_solo 'sound_caravan_web.Home' as home %}
+    {% get_solo 'mister_cobol_web.Home' as home %}
     <video id="bgvideo" muted autoplay loop>
         {% if home.video_mp4 %}
             <source src="{{ home.video_mp4.url }}" type="video/mp4"></source>

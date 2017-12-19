@@ -7,13 +7,12 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sound_caravan_web', '0010_auto_20140717_1221'),
+        ('mister_cobol_web', '0007_member_role'),
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='tour',
+        migrations.RemoveField(
+            model_name='event',
             name='image',
-            field=models.ForeignKey(blank=True, verbose_name='Image', to='sound_caravan_web.Image', null=True),
         ),
     ]

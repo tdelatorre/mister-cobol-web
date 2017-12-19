@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sound_caravan_web', '0011_auto_20140717_1235'),
+        ('mister_cobol_web', '0011_auto_20140717_1235'),
     ]
 
     operations = [

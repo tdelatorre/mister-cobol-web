@@ -1,5 +1,5 @@
 """
-Django settings for sound_caravan_web project.
+Django settings for mister_cobol_web project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -44,7 +44,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
-    'sound_caravan_web',
+    'mister_cobol_web',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -59,9 +59,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'sound_caravan_web.urls'
+ROOT_URLCONF = 'mister_cobol_web.urls'
 
-WSGI_APPLICATION = 'sound_caravan_web.wsgi.application'
+WSGI_APPLICATION = 'mister_cobol_web.wsgi.application'
 
 
 # Database
@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'sound_caravan_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'soundcaravan',                       # Or path to database file if using sqlite3.
+        'NAME': 'mistercobol',                       # Or path to database file if using sqlite3.
         'USER': '',                   # Not used with sqlite3.
         'PASSWORD': '',                # Not used with sqlite3.
         'HOST': '',                             # Set to empty string for localhost. Not used with sqlite3.

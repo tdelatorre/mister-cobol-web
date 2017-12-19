@@ -7,14 +7,14 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sound_caravan_web', '0003_auto_20140715_1532'),
+        ('mister_cobol_web', '0006_tour'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='image',
-            name='for_gallery',
-            field=models.BooleanField(verbose_name='For gallery', default=False),
-            preserve_default=True,
+            model_name='member',
+            name='role',
+            field=models.CharField(max_length=100, verbose_name='Role', default=''),
+            preserve_default=False,
         ),
     ]

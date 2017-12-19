@@ -1,7 +1,7 @@
 The PRIMARY AUTHORS are:
 
 - Teresa de la Torre <teresa.delatorre@kaleidos.net>
-- Juan José Martín Tena <soundcaravanrock@gmail.com>
+- Juan José Martín Tena <jnjmarte@gmail.com>
 - Daniel Herrero García <daniel.herrero@kaleidos.net>
 - Juan de la Cruz García <delacruzgarciajuan@gmail.com>
 - Jesús Espino García <jesus.espino@kaleidos.net>

@@ -4,7 +4,7 @@ __pycache__/
 /src/media
 node_modules/
 .sass-cache
-src/sound_caravan_web/settings/local.py
+src/mister_cobol_web/settings/local.py
 
 # C extensions
 *.so
@@ -55,4 +55,4 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
-src/sound_caravan_web/settings_local.py
+src/mister_cobol_web/settings_local.py

@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'src/sound_caravan_web/static/css/style.css': 'sass/style.scss',
+                    'src/mister_cobol_web/static/css/style.css': 'sass/style.scss',
                 }
             }
         },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 tasks: ['coffee']
             },
             uglify: {
-                files: 'src/sound_caravan_web/static/js/features.js',
+                files: 'src/mister_cobol_web/static/js/features.js',
                 tasks: ['uglify']
             },
             options: {
@@ -38,14 +38,14 @@ module.exports = function(grunt) {
         coffee: {
             compile: {
                 files: {
-                    'src/sound_caravan_web/static/js/features.js': 'coffee/features.coffee'
+                    'src/mister_cobol_web/static/js/features.js': 'coffee/features.coffee'
                 }
             },
         },
         uglify: {
             my_target: {
                 files: {
-                'src/sound_caravan_web/static/js/features.min.js': ['src/sound_caravan_web/static/js/features.js']
+                'src/mister_cobol_web/static/js/features.min.js': ['src/mister_cobol_web/static/js/features.js']
                 }
             }
         }

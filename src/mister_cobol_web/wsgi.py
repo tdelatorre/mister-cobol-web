@@ -1,5 +1,5 @@
 """
-WSGI config for sound_caravan_web project.
+WSGI config for mister_cobol_web project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sound_caravan_web.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mister_cobol_web.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

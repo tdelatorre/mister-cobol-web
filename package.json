@@ -1,7 +1,7 @@
 {
-  "name": "SoundCaravan",
+  "name": "MisterCobol",
   "version": "0.0.1",
-  "description": "Sound Caravan Web",
+  "description": "Mister Cobol Web",
   "author": "Piweek",
   "devDependencies": {
     "grunt": "^0.4.5",
