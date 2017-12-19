@@ -695,6 +695,10 @@ p {
   box-shadow: none !important;
 }
 
+.video-iframe {
+  text-align: center;
+}
+
 #carousel.flexslider img {
   height: auto;
   width: 100% !important;

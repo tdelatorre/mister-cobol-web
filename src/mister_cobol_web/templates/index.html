@@ -147,7 +147,7 @@
             <h2 class="row-title">{% trans 'VÍDEOS' %}</h2>
 
             <div id="video-slider" class="flexslider">
-                <ul class="slides" style="text-align: center;">
+                <ul class="slides video-iframe">
                     {% for video in videos %}
                         <li>{{ video.video_script|safe }}</li>
                     {% endfor %}
