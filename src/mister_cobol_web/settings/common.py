@@ -116,7 +116,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-CONTACT_EMAILS_DESTIONATION = 'dummy@dummy.com'
+CONTACT_EMAILS_DESTINATION = 'mistercobol@gmail.com'
 
 try:
     from .settings_local import *

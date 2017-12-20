@@ -700,6 +700,7 @@ p {
   width: 22%;
 }
 .about-us .about-us-text {
+  margin-top: 40px;
   width: 70%;
 }
 .about-us .member-name {
@@ -910,6 +911,7 @@ video#bgvideo {
     width: 100%;
   }
   .about-us .about-us-text {
+    margin-top: 40px;
     width: 100%;
   }
 
