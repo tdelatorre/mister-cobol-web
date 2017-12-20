@@ -142,12 +142,32 @@ p {
     }
 }
 
+.home-header {
+    min-height: 23vh;
+}
+
+.home-video {
+    min-height: 77vh;
+}
+
+.fullview {
+    align-items: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 .home {
     text-align: center;
     max-height: 650px;
     padding: 10% 0 15% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 73vh;
     h1 {
-        max-width: 500px;
+        max-width: 700px;
         width: 100%;
         height: 300px;
         margin: 0 auto;
@@ -165,7 +185,7 @@ p {
 }
 
 .about-us {
-    margin-top: 30px;
+    margin-top: 80px;
     img {
         width: 22%;
     }
@@ -173,7 +193,7 @@ p {
         width: 70%;
     }
     .member-name {
-        color: $primary-color;
+        color: $highlight-color;
         font-family: 'Oswald', sans-serif;
         font-size: 2em;
     }
@@ -185,6 +205,10 @@ p {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
+    }
+
+    .video-iframe {
+        text-align: center;
     }
 
     #carousel.flexslider img {
@@ -213,11 +237,11 @@ p {
     padding: 80px 0;
     .event-row {
         width: 75%;
-        margin: 0 auto 15px auto;
-        border-bottom: solid 3px $primary-color;
+        margin: 0 auto 50px auto;
+        border-bottom: solid 3px $secondary-color;
         .event-date {
             display: inline-block;
-            background-color: $primary-color;
+            background-color: $secondary-color;
             color: white;
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
@@ -235,15 +259,16 @@ p {
                 font-family: 'Oswald', sans-serif;
                 font-size: 2em;
             }
-            .event-description { color: $primary-color;}
+            .event-description { color: white;}
             .event-data {}
         }
         &.current {
-            border-bottom: solid 3px white;
+            border-bottom: solid 3px $highlight-color;
             .event-date {
-                background-color: white;
-                color: $primary-color;
+                background-color: $highlight-color;
+                color: white;
             }
+            .event-description { color: $highlight-color;}
         }
     }
     .share-btn {
@@ -263,7 +288,7 @@ p {
         padding: 4em 0 3em 0;
     }
     .contact {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         padding: 20px;
         #contact-form {
             overflow: hidden;
@@ -282,7 +307,7 @@ p {
                     outline: none;
 
                     &:focus {
-                        border: 2px solid darken($primary-color, 15%);
+                        border: 2px solid darken($secondary-color, 15%);
                     }
                 }
                 textarea#id_message {
@@ -296,12 +321,12 @@ p {
                     width: auto;
                     min-width: 100px;
                     font-size: 1.2em;
-                    background-color: darken($primary-color, 15%);
+                    background-color: darken($highlight-color, 15%);
                     text-align: center;
                     cursor: pointer;
                     &:hover {
                         background-color: white;
-                        color: $primary-color;
+                        color: $highlight-color;
                     }
                 }
             }

@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="row" id="inicio">
+    <div class="row home-header" id="inicio">
         <div class="header">
             <ul class="nav">
                 <li class="main-logo"><a class="smooth" href="#inicio"><a href="{{ request.get_full_path }}"><img src="/static/images/main-logo.png" alt="Mister Cobol" title="Mister Cobol" border="0"></a></a></li>
@@ -59,15 +59,15 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="row-inside home">
+    <div class="row home-video">
+        <div class="home">
             <h1>
                 <img src="/static/images/main-logo.png" alt="MISTER COBOL" border="0"/>
             </h1>
         </div>
     </div>
 
-    <div class="row bg-darkgray dashed" id="sobre-nosotros">
+    <div class="row fullview bg-darkgray dashed" id="sobre-nosotros">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'SOBRE NOSOTROS' %}</h2>
 
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div class="row bg-black dashed" id="tour">
+    <div class="row fullview bg-black dashed" id="tour">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'TOUR' %}</h2>
             {% get_solo 'mister_cobol_web.Tour' as tour %}
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <div class="row bg-darkgray dashed" id="fotos">
+    <div class="row fullview bg-darkgray dashed" id="fotos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'GALERÍA DE FOTOS' %}</h2>
 
@@ -142,7 +142,7 @@
         </div>
     </div>
 
-    <div class="row bg-black dashed" id="videos">
+    <div class="row fullview bg-black dashed" id="videos">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'VÍDEOS' %}</h2>
 
@@ -156,7 +156,7 @@
         </div>
     </div>
 
-    <div class="row bg-darkgray dashed" id="contacto">
+    <div class="row fullview bg-darkgray dashed" id="contacto">
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'CONTACTA CON NOSOTROS' %}</h2>
             {% get_solo 'mister_cobol_web.Contact' as contact %}

@@ -39,7 +39,7 @@ table {
 }
 
 /*
-    elhombretecla @2014:
+    elhombretecla @2017:
     Choose a grid width, the number of columns and the margin between columns.
     The result of the following equation has to be an integer, not a fraction:
 
@@ -429,7 +429,7 @@ h4 {
 }
 
 .bg-primary-color {
-  background-color: #a30606;
+  background-color: #524f4f;
 }
 
 .title-darkgray {
@@ -445,7 +445,7 @@ h4 {
 }
 
 .dashed {
-  border-top: 5px solid #a30606;
+  border-top: 1px solid white;
 }
 
 .translate-3d-menu {
@@ -596,7 +596,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #a30606;
+  background-color: #524f4f;
   margin: 0;
   max-width: 100%;
   text-align: center;
@@ -647,13 +647,33 @@ p {
   background-color: black;
 }
 
+.home-header {
+  min-height: 23vh;
+}
+
+.home-video {
+  min-height: 77vh;
+}
+
+.fullview {
+  align-items: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .home {
   text-align: center;
   max-height: 650px;
   padding: 10% 0 15% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 73vh;
 }
 .home h1 {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   height: 300px;
   margin: 0 auto;
@@ -674,7 +694,7 @@ p {
 }
 
 .about-us {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .about-us img {
   width: 22%;
@@ -719,12 +739,12 @@ p {
 }
 .content .event-row {
   width: 75%;
-  margin: 0 auto 15px auto;
-  border-bottom: solid 3px #a30606;
+  margin: 0 auto 50px auto;
+  border-bottom: solid 3px #827e7e;
 }
 .content .event-row .event-date {
   display: inline-block;
-  background-color: #a30606;
+  background-color: #827e7e;
   color: white;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
@@ -744,14 +764,17 @@ p {
   font-size: 2em;
 }
 .content .event-row .event-content .event-description {
+  color: white;
+}
+.content .event-row.current .event-content .event-description {
   color: #a30606;
 }
 .content .event-row.current {
-  border-bottom: solid 3px white;
+  border-bottom: solid 3px #a30606;
 }
 .content .event-row.current .event-date {
-  background-color: white;
-  color: #a30606;
+  background-color: #a30606;
+  color: white;
 }
 .content .share-btn {
   display: inline-block !important;
@@ -770,7 +793,7 @@ p {
   padding: 4em 0 3em 0;
 }
 .content .contact {
-  background-color: #a30606;
+  background-color: #827e7e;
   padding: 20px;
 }
 .content .contact #contact-form {
@@ -790,7 +813,7 @@ p {
   outline: none;
 }
 .content .contact #contact-form p input:focus {
-  border: 2px solid #590303;
+  border: 2px solid #827e7e;
 }
 .content .contact #contact-form p textarea#id_message {
   width: 100%;
@@ -803,7 +826,7 @@ p {
   width: auto;
   min-width: 100px;
   font-size: 1.2em;
-  background-color: #590303;
+  background-color: #a30606;
   text-align: center;
   cursor: pointer;
 }
