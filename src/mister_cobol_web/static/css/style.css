@@ -638,7 +638,7 @@ p {
   max-width: 100%;
   text-align: center;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   -webkit-transform: translateZ(0);
 }
 .header .nav.f-nav li.main-logo {

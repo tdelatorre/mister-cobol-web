@@ -28,10 +28,17 @@
     <script src="/static/js/features.min.js" type="text/javascript"></script>
     <script src="/static/js/waypoints.min.js" type="text/javascript"></script>
 
-    <!-- Flexslider photo gallery -->
     <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css">
     <script src="/static/js/plugins/jquery.fitvids.js"></script>
     <script src="/static/js/jquery.flexslider.js"></script>
+
+    <script src="/static/js/galleria/galleria-1.5.7.min.js"></script>
+    <link rel="stylesheet" href="/static/js/galleria/themes/classic/galleria.classic.css">
+    <script src="/static/js/galleria/themes/classic/galleria.classic.min.js"></script>
+
+    <style>
+      .galleria{ max-width: 700px; height: 400px; background: #000; margin: auto }
+    </style>
 </head>
 
 <body>
@@ -131,27 +138,21 @@
         <div class="row-inside content">
             <h2 class="row-title">{% trans 'GALERÍA DE FOTOS' %}</h2>
 
-            <!-- Flexslider photo gallery -->
-            <div id="slider" class="flexslider">
-                <ul class="slides">
-                    {% for image in images %}
-                        <li>
-                            <img src="{{ image.image.url }}" alt="{{ image.title }}" />
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="galleria">
+                {% for image in images %}
+                  <img src="{{ image.image.url }}" alt="{{ image.title }}" />
+                {% endfor %}
             </div>
-            <div id="carousel" class="flexslider">
-                <ul class="slides">
-                    {% for image in images %}
-                        {% if image.image_th %}
-                            <li>
-                                <img src="{{ image.image_th.url }}" alt="{{ image.title }}" />
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
+            <script>
+            (function() {
+                Galleria.run('.galleria', {
+                    autoplay: 3000, // will move forward every 7 seconds
+                    imageCrop: 'landscape',
+                    imagePosition: 'center',
+                    lightbox: true
+                });
+            }());
+            </script>
         </div>
     </div>
 
@@ -220,25 +221,6 @@
 
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
-            // The slider being synced must be initialized first
-            $('#carousel').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 210,
-                itemMargin: 5,
-                asNavFor: '#slider'
-            });
-
-            $('#slider').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                sync: "#carousel"
-            });
-
             $('#video-slider').flexslider({
                 animation: "slide",
                 controlNav: false,
