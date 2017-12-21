@@ -1,5 +1,5 @@
 /*
-    elhombretecla @2014:
+    elhombretecla @2017:
     Choose a grid width, the number of columns and the margin between columns.
     The result of the following equation has to be an integer, not a fraction:
 
@@ -12,7 +12,7 @@ $col_margin: 2%;  /* margin between columns */
 
 /* math magic */
 $col_width: ($width - ($col_margin * ($columns - 1))) / $columns;
-$col_total_width: $col_width + $col_margin;  
+$col_total_width: $col_width + $col_margin;
 
 /* create row div */
 @mixin row() {

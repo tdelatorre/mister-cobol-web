@@ -157,6 +157,10 @@ class Contact(SingletonModel):
         max_length=255, blank=False, null=False,
         verbose_name=_(u'Twitter')
     )
+    instagram = models.CharField(
+        max_length=255, blank=False, null=False,
+        verbose_name=_(u'Instagram')
+    )
     youtube = models.CharField(
         max_length=255, blank=False, null=False,
         verbose_name=_(u'YouTube')
