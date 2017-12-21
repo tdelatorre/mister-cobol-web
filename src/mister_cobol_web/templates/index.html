@@ -76,16 +76,29 @@
                 <p>{{ about_us.description }}</p>
             </div>
 
-            {% for member in members %}
-                <div class="row about-us">
-                    <img class="left" src="{{ member.image.image.url }}" alt="{{ member.name }}">
+            <div class="row about-us">
+              {% for member in members %}
+                {% if member.order != 5 %}
+                <div class="column">
+                  <img class="center" src="{{ member.image.image.url }}" alt="{{ member.name }}">
 
-                    <div class="about-us-text right last">
-                        <p class="member-name"><strong>{{ member.name }}</strong></p>
-                        <p>{{ member.role }}</p>
-                    </div>
+                  <div class="about-us-text center">
+                      <p class="member-name"><strong>{{ member.name }}</strong></p>
+                      <p>{{ member.role }}</p>
+                  </div>
                 </div>
-            {% endfor %}
+                {% else %}
+                <div class="column-center">
+                  <img class="center-alone" src="{{ member.image.image.url }}" alt="{{ member.name }}">
+
+                  <div class="about-us-text center">
+                      <p class="member-name"><strong>{{ member.name }}</strong></p>
+                      <p>{{ member.role }}</p>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
         </div>
     </div>
 
