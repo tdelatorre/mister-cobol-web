@@ -41,7 +41,7 @@ class ContactView(View):
             message += "Subject: {}\n\n".format(form.cleaned_data['subject'])
             message += "Message:\n{}\n".format(form.cleaned_data['message'])
 
-            send_mail("Contact from the web", message, "web@mister_cobol_web", [settings.CONTACT_EMAILS_DESTINATION], fail_silently=True)
+            send_mail("Contact from the web", message, "web@mrcobol.com", [settings.CONTACT_EMAILS_DESTINATION], fail_silently=True)
 
             return HttpResponse(json.dumps({"success": True}), content_type='application/json')
 
