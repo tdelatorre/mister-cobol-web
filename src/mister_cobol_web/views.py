@@ -18,6 +18,7 @@ class LandingView(TemplateView):
     def get_context_data(self, **kwargs):
         members = Member.objects.all()
         events = Event.objects.all()
+        audios = Audio.objects.all()
         images = Image.objects.filter(for_gallery=True)
         videos = Video.objects.all()
 
@@ -25,6 +26,7 @@ class LandingView(TemplateView):
         context.update({
             'members': members,
             'events': events,
+            'audios': audios,
             'images': images,
             'videos': videos,
             'form': ContactForm(),

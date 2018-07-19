@@ -230,3 +230,26 @@ class Video(models.Model):
 
     def __str__(self):
         return u'{}'.format(self.title)
+
+
+class Audio(models.Model):
+    title = models.CharField(
+        max_length=50, blank=False, null=False,
+        verbose_name=_(u'Title')
+    )
+    audio_file = models.FileField(
+        null=False, blank=False,
+        default=None, upload_to='files',
+        verbose_name=_(u'Audio mp3')
+    )
+
+    class Meta:
+        verbose_name = _(u'Audio')
+        verbose_name_plural = _(u'Audio')
+        ordering = ['title']
+
+    def __unicode__(self):
+        return u'{}'.format(self.title)
+
+    def __str__(self):
+        return u'{}'.format(self.title)
