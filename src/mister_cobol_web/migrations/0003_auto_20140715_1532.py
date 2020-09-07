@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='image',
-            field=models.ForeignKey(verbose_name='Image', to='mister_cobol_web.Image', default=''),
+            field=models.ForeignKey(verbose_name='Image', to='mister_cobol_web.Image', default='', on_delete = models.CASCADE),
             preserve_default=False,
         ),
         migrations.RemoveField(

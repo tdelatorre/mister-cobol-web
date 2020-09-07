@@ -1,18 +1,14 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from .views import LandingView, ContactView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'mister_cobol_web.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^$', LandingView.as_view(), name='landing'),
     url(r'^contact/$', ContactView.as_view(), name='contact'),
-)
+]
 
 
 

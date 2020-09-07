@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.contenttypes import generic
 from solo.admin import SingletonModelAdmin
 from .models import *
 

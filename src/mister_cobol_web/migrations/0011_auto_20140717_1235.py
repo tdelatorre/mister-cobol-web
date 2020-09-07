@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='tour',
             name='image',
-            field=models.ForeignKey(blank=True, verbose_name='Image', to='mister_cobol_web.Image', null=True),
+            field=models.ForeignKey(blank=True, verbose_name='Image', to='mister_cobol_web.Image', null=True, on_delete = models.CASCADE),
         ),
     ]

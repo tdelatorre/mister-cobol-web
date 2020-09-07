@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(primary_key=True, serialize=False, auto_created=True, verbose_name='ID')),
                 ('title', models.CharField(max_length=50, verbose_name='Title')),
                 ('description', models.TextField(verbose_name='Description')),
-                ('image', models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image')),
+                ('image', models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image', on_delete = models.CASCADE)),
             ],
             options={
                 'verbose_name_plural': 'Tours',

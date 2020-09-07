@@ -51,6 +51,7 @@ class Member(models.Model):
     )
     image = models.ForeignKey('Image',
         blank=False, null=False,
+        on_delete = models.CASCADE,
         verbose_name=_(u'Image')
     )
     order = models.SmallIntegerField(
@@ -77,6 +78,7 @@ class Tour(SingletonModel):
     )
     image = models.ForeignKey('Image',
         blank=True, null=True,
+        on_delete = models.CASCADE,
         verbose_name=_(u'Image')
     )
 

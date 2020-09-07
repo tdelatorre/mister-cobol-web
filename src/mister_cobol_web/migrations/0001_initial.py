@@ -85,7 +85,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='aboutus',
             name='image',
-            field=models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image'),
+            field=models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image', on_delete = models.CASCADE),
             preserve_default=True,
         ),
         migrations.CreateModel(
@@ -94,7 +94,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('name', models.CharField(max_length=100, verbose_name='Name')),
                 ('description', models.TextField(verbose_name='Description')),
-                ('image', models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image')),
+                ('image', models.ForeignKey(to='mister_cobol_web.Image', verbose_name='Image', on_delete = models.CASCADE)),
             ],
             options={
                 'verbose_name_plural': 'Members',
@@ -117,7 +117,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='home',
             name='main_video',
-            field=models.ForeignKey(to='mister_cobol_web.Video', verbose_name='Main video'),
+            field=models.ForeignKey(to='mister_cobol_web.Video', verbose_name='Main video', on_delete = models.CASCADE),
             preserve_default=True,
         ),
     ]
